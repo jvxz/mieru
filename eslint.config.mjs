@@ -2,7 +2,7 @@ import antfu from '@antfu/eslint-config'
 import nextPlugin from '@next/eslint-plugin-next'
 import readableTailwind from 'eslint-plugin-readable-tailwind'
 
-export default antfu([
+export default antfu(
   {
     react: true,
     typescript: {
@@ -106,4 +106,4 @@ export default antfu([
       'react-refresh/only-export-components': 'off',
     },
   },
-])
+)
