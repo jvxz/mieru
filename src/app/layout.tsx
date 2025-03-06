@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
-import { Inria_Sans } from 'next/font/google'
+import { Radio_Canada_Big } from 'next/font/google'
 import './globals.css'
 
-const inriaSans = Inria_Sans({
+const radioCanadaBig = Radio_Canada_Big({
   subsets: ['latin'],
-  variable: '--font-inria-sans',
-  weight: ['300', '400', '700'],
+  variable: '--font-radio-canada-big',
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -14,13 +14,14 @@ export const metadata: Metadata = {
   description: 'mieru : jamie\'s personal ui kit',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({ children }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inriaSans.variable}>
+    <html
+      lang="en"
+      className={radioCanadaBig.variable}
+    >
       <body className="font-sans antialiased">
         <Providers>
           {children}
