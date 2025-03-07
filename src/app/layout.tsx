@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
-import { Radio_Canada_Big } from 'next/font/google'
+import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
 
-const radioCanadaBig = Radio_Canada_Big({
+const sans = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-radio-canada-big',
   weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
@@ -20,9 +20,9 @@ export default function RootLayout({ children }: Readonly<{
   return (
     <html
       lang="en"
-      className={radioCanadaBig.variable}
+      className={sans.variable}
     >
-      <body className="font-sans antialiased">
+      <body className="font-sans">
         <Providers>
           {children}
         </Providers>
