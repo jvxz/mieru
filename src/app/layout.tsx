@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
 
@@ -24,6 +25,11 @@ export default function RootLayout({ children }: Readonly<{
     >
       <body className="font-sans">
         <Providers>
+          {process.env.NODE_ENV === 'development' && (
+            <ThemeToggle
+              className="absolute top-4 left-4"
+            />
+          )}
           {children}
         </Providers>
       </body>
