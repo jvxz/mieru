@@ -1,10 +1,8 @@
 'use client'
-
 import { interactiveStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { XIcon } from 'lucide-react'
-
 import * as React from 'react'
 
 function Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {
@@ -51,7 +49,10 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        'data-[state=open]:animate-in data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80 backdrop-blur-sm',
+        `
+          data-[state=open]:animate-in data-[state=open]:fade-in-0
+          fixed inset-0 z-50 bg-black/80 backdrop-blur-sm
+        `,
 
         className,
       )}
@@ -72,7 +73,14 @@ function DialogContent({
         data-slot="dialog-content"
         className={cn(
           staticStyles.base,
-          'data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-2 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 sm:max-w-lg',
+          staticStyles.variant.default,
+          `
+            data-[state=open]:animate-in data-[state=open]:fade-in-0
+            data-[state=open]:slide-in-from-bottom-2
+            fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)]
+            translate-x-[-50%] translate-y-[-50%] gap-4
+            sm:max-w-xl
+          `,
           className,
         )}
         {...props}
@@ -82,10 +90,16 @@ function DialogContent({
           interactiveStyles.base,
           interactiveStyles.variant.ghost,
           interactiveStyles.size.icon,
-          'ring-offset-background absolute top-4 right-4 inline-flex size-6 items-center justify-center opacity-70',
+          `
+            ring-offset-background absolute top-3 right-3 inline-flex size-6
+            items-center justify-center opacity-70
+          `,
         )}
         >
-          <XIcon />
+          <Icon
+            icon="ph:x"
+            className="size-4"
+          />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
@@ -97,7 +111,10 @@ function DialogHeader({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="dialog-header"
-      className={cn('flex flex-col gap-2 text-center sm:text-left', className)}
+      className={cn(`
+        flex flex-col gap-2 text-center
+        sm:text-left
+      `, className)}
       {...props}
     />
   )
@@ -108,7 +125,10 @@ function DialogFooter({ className, ...props }: React.ComponentProps<'div'>) {
     <div
       data-slot="dialog-footer"
       className={cn(
-        'flex flex-col-reverse gap-2 sm:flex-row sm:justify-end',
+        `
+          flex flex-col-reverse gap-2
+          sm:flex-row sm:justify-end
+        `,
         className,
       )}
       {...props}
