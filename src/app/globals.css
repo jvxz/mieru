@@ -57,15 +57,17 @@
   --radius: var(--radius);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-accordion-down: accordion-down 0.15s;
+  --animate-accordion-up: accordion-up 0.15s;
 
   @keyframes accordion-down {
     from {
       height: 0;
+      opacity: 0;
     }
     to {
       height: var(--radix-accordion-content-height);
+      opacity: 1;
     }
   }
 
@@ -75,6 +77,7 @@
     }
     to {
       height: 0;
+      opacity: 0;
     }
   }
 }
