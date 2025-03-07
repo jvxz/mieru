@@ -2,8 +2,8 @@
 
 import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { ChevronDownIcon } from 'lucide-react'
 
 import * as React from 'react'
 
@@ -46,7 +46,10 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5" />
+        <Icon
+          icon="ph:caret-down"
+          className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5"
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
