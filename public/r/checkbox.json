@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "type": "registry:component",
+  "title": "checkbox",
+  "description": "checkbox component.",
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/checkbox.tsx",
+      "content": "'use client'\nimport { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport { Icon } from '@iconify/react'\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\nimport * as React from 'react'\n\nfunction Checkbox({\n  className,\n  ...props\n}: React.ComponentProps<typeof CheckboxPrimitive.Root>) {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot=\"checkbox\"\n      className={cn(\n        interactiveStyles.base,\n        interactiveStyles.variant.default,\n        'active:data-[state=checked]:bg-primary/90 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary size-4 cursor-default rounded-sm transition-shadow',\n        className,\n      )}\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot=\"checkbox-indicator\"\n        className=\"flex items-center justify-center text-current transition-none\"\n      >\n        <Icon\n          icon=\"ph:check-bold\"\n          className=\"size-3\"\n        />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nexport { Checkbox }\n",
+      "type": "registry:component"
+    }
+  ]
+}
