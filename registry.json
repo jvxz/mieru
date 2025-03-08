@@ -169,21 +169,6 @@
       ]
     },
     {
-      "name": "chart",
-      "type": "registry:component",
-      "title": "chart",
-      "description": "chart component.",
-      "registryDependencies": [
-        "chart"
-      ],
-      "files": [
-        {
-          "path": "src/components/ui/chart.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "checkbox",
       "type": "registry:component",
       "title": "checkbox",
