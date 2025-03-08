@@ -23,6 +23,12 @@ export default function RootLayout({ children }: Readonly<{
       lang="en"
       className={sans.variable}
     >
+      <head>
+        <script
+          crossOrigin="anonymous"
+          src="//unpkg.com/react-scan/dist/auto.global.js"
+        />
+      </head>
       <body className="font-sans">
         <Providers>
           {process.env.NODE_ENV === 'development' && (
@@ -30,7 +36,10 @@ export default function RootLayout({ children }: Readonly<{
               className="absolute top-4 left-4"
             />
           )}
-          {children}
+          {/* {children} */}
+          <div className="grid h-screen place-items-center text-xs">
+            <p>mieru 🎀</p>
+          </div>
         </Providers>
       </body>
     </html>
