@@ -70,6 +70,7 @@
     "babel-plugin-react-compiler": "^19.0.0-beta-40c6c23-20250301",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-readable-tailwind": "^2.0.0-beta.4",
     "tailwindcss": "^4",
