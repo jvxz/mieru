@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
 import useEmblaCarousel from 'embla-carousel-react'
 import * as React from 'react'
+import { useMemo } from 'react'
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -102,19 +103,20 @@ function Carousel({
     }
   }, [api, onSelect])
 
+  const value = useMemo(() => ({
+    carouselRef,
+    api,
+    opts,
+    orientation: orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+    scrollPrev,
+    scrollNext,
+    canScrollPrev,
+    canScrollNext,
+  }), [carouselRef, api, opts, orientation, scrollPrev, scrollNext, canScrollPrev, canScrollNext])
+
   return (
     <CarouselContext
-      value={{
-        carouselRef,
-        api,
-        opts,
-        orientation:
-          orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
-        scrollPrev,
-        scrollNext,
-        canScrollPrev,
-        canScrollNext,
-      }}
+      value={value}
     >
       <div
         onKeyDownCapture={handleKeyDown}

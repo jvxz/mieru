@@ -1,11 +1,11 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 @theme {
   --font-sans:
-    var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    var(--font-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   --text-base: var(--text-base);
   --text-sm: calc(var(--text-base) * 0.875);
