@@ -3,7 +3,6 @@ import { interactiveStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import * as React from 'react'
 
 function Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {
   return (
