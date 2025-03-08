@@ -33,7 +33,7 @@ const popoverStyles = {
           data-[variant=destructive]:focus:text-destructive-foreground
           data-[variant=destructive]:*:[svg]:!text-destructive-foreground
           dark:data-[variant=destructive]:focus:bg-destructive/40
-          relative flex cursor-default items-center  p-1 px-2 text-sm
+          relative flex cursor-default items-center p-1 px-2 text-sm
           outline-hidden transition-all select-none
           focus-visible:ring-0
           data-[disabled]:pointer-events-none data-[disabled]:opacity-50
@@ -50,8 +50,14 @@ const popoverStyles = {
           `],
 }
 
+const overlayStyles = `
+  data-[state=open]:animate-in data-[state=open]:fade-in-0
+  fixed inset-0 z-50 bg-black/80 backdrop-blur-sm
+`
+
 export {
   interactiveStyles,
+  overlayStyles,
   popoverStyles,
   staticStyles,
 }
