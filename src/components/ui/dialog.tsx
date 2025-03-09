@@ -1,5 +1,5 @@
 'use client'
-import { interactiveStyles, staticStyles } from '@/lib/styles'
+import { interactiveStyles, overlayStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
@@ -48,11 +48,7 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        `
-          data-[state=open]:animate-in data-[state=open]:fade-in-0
-          fixed inset-0 z-50 bg-black/80 backdrop-blur-sm
-        `,
-
+        overlayStyles,
         className,
       )}
       {...props}

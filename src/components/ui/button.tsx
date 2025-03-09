@@ -7,7 +7,10 @@ import { cva } from 'class-variance-authority'
 import * as React from 'react'
 
 const buttonVariants = cva(
-  `${interactiveStyles.base} inline-flex items-center justify-center`,
+  `
+    ${interactiveStyles.base}
+    inline-flex items-center justify-center
+  `,
   {
     variants: {
       variant: {
