@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "type": "registry:component",
+  "title": "textarea",
+  "description": "textarea component.",
+  "registryDependencies": [
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "content": "import { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\n\nfunction Textarea({ className, ...props }: React.ComponentProps<'textarea'>) {\n  return (\n    <textarea\n      data-slot=\"textarea\"\n      className={cn(\n        interactiveStyles.base,\n        interactiveStyles.variant.default,\n        `\n          placeholder:text-muted-foreground\n          field-sizing-content min-h-16 w-full cursor-text p-2\n          transition-[color,box-shadow,opacity]\n          md:text-sm\n        `,\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Textarea }\n",
+      "type": "registry:component"
+    }
+  ]
+}

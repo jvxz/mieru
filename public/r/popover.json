@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover",
+  "type": "registry:component",
+  "title": "popover",
+  "description": "popover component.",
+  "registryDependencies": [
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/popover.tsx",
+      "content": "'use client'\nimport { popoverStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as PopoverPrimitive from '@radix-ui/react-popover'\nimport * as React from 'react'\n\nfunction Popover({ ...props }: React.ComponentProps<typeof PopoverPrimitive.Root>) {\n  return (\n    <PopoverPrimitive.Root\n      data-slot=\"popover\"\n      {...props}\n    />\n  )\n}\n\nfunction PopoverTrigger({ ...props }: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {\n  return (\n    <PopoverPrimitive.Trigger\n      data-slot=\"popover-trigger\"\n      {...props}\n    />\n  )\n}\n\nfunction PopoverContent({\n  className,\n  align = 'center',\n  sideOffset = 4,\n  ...props\n}: React.ComponentProps<typeof PopoverPrimitive.Content>) {\n  return (\n    <PopoverPrimitive.Portal>\n      <PopoverPrimitive.Content\n        data-slot=\"popover-content\"\n        align={align}\n        sideOffset={sideOffset}\n        className={cn(\n          popoverStyles.content,\n          `\n            data-[state=open]:slide-in-from-top-2\n            p-4\n          `,\n          className,\n        )}\n        {...props}\n      />\n    </PopoverPrimitive.Portal>\n  )\n}\n\nfunction PopoverAnchor({ ...props }: React.ComponentProps<typeof PopoverPrimitive.Anchor>) {\n  return (\n    <PopoverPrimitive.Anchor\n      data-slot=\"popover-anchor\"\n      {...props}\n    />\n  )\n}\n\nexport {\n  Popover,\n  PopoverAnchor,\n  PopoverContent,\n  PopoverTrigger,\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

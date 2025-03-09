@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "type": "registry:component",
+  "title": "switch",
+  "description": "switch component.",
+  "registryDependencies": [
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/switch.tsx",
+      "content": "'use client'\nimport { interactiveStyles, staticStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as SwitchPrimitive from '@radix-ui/react-switch'\n\nfunction Switch({\n  className,\n  ...props\n}: React.ComponentProps<typeof SwitchPrimitive.Root>) {\n  return (\n    <SwitchPrimitive.Root\n      data-slot=\"switch\"\n      className={cn(\n        staticStyles.base,\n        staticStyles.variant.default,\n        `\n          peer bg-accent border-accent inline-flex h-5 w-9 items-center\n          rounded-full border-2 p-0\n          data-[state=checked]:bg-primary data-[state=checked]:border-primary\n        `,\n        className,\n      )}\n      {...props}\n    >\n      <SwitchPrimitive.Thumb\n        data-slot=\"switch-thumb\"\n        className={cn(\n          interactiveStyles.base,\n          interactiveStyles.variant.default,\n          `\n            bg-background pointer-events-none block size-4 rounded-full border-0\n            ring-0 transition-transform\n            data-[state=checked]:translate-x-4\n            data-[state=unchecked]:translate-x-0\n          `,\n        )}\n      />\n    </SwitchPrimitive.Root>\n  )\n}\n\nexport { Switch }\n",
+      "type": "registry:component"
+    }
+  ]
+}

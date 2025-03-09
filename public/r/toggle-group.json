@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group",
+  "type": "registry:component",
+  "title": "toggle-group",
+  "description": "toggle group component.",
+  "registryDependencies": [
+    "toggle-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/toggle-group.tsx",
+      "content": "'use client'\nimport type { VariantProps } from 'class-variance-authority'\nimport { toggleVariants } from '@/components/ui/toggle'\nimport { cn } from '@/lib/utils'\nimport * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group'\nimport { createContext, useContext, useMemo } from 'react'\n\nconst ToggleGroupContext = createContext<\n  VariantProps<typeof toggleVariants>\n>({\n  size: 'default',\n  variant: 'default',\n})\n\nfunction ToggleGroup({\n  className,\n  variant,\n  size,\n  children,\n  ...props\n}: React.ComponentProps<typeof ToggleGroupPrimitive.Root> &\n  VariantProps<typeof toggleVariants>) {\n  const value = useMemo(() => ({\n    variant,\n    size,\n  }), [variant, size])\n\n  return (\n    <ToggleGroupPrimitive.Root\n      data-slot=\"toggle-group\"\n      data-variant={variant}\n      data-size={size}\n      className={cn(\n        `\n          group/toggle-group flex w-fit items-center rounded\n          data-[variant=outline]:shadow\n        `,\n        className,\n      )}\n      {...props}\n    >\n      <ToggleGroupContext value={value}>\n        {children}\n      </ToggleGroupContext>\n    </ToggleGroupPrimitive.Root>\n  )\n}\n\nfunction ToggleGroupItem({\n  className,\n  children,\n  variant,\n  size,\n  ...props\n}: React.ComponentProps<typeof ToggleGroupPrimitive.Item> &\n  VariantProps<typeof toggleVariants>) {\n  const context = useContext(ToggleGroupContext)\n\n  return (\n    <ToggleGroupPrimitive.Item\n      data-slot=\"toggle-group-item\"\n      data-variant={context.variant || variant}\n      data-size={context.size || size}\n      className={cn(\n        toggleVariants({\n          variant: context.variant || variant,\n          size: context.size || size,\n        }),\n        `\n          min-w-0 flex-1 shrink-0 rounded-none shadow-none\n          first:rounded-l-md\n          last:rounded-r-md\n          focus:z-10\n          focus-visible:z-10\n          data-[variant=outline]:border-r-0 data-[variant=outline]:border-l-0\n          data-[variant=outline]:first:border-l\n          data-[variant=outline]:last:border-r\n        `,\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </ToggleGroupPrimitive.Item>\n  )\n}\n\nexport { ToggleGroup, ToggleGroupItem }\n",
+      "type": "registry:component"
+    }
+  ]
+}

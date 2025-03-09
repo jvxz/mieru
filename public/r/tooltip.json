@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip",
+  "type": "registry:component",
+  "title": "tooltip",
+  "description": "tooltip component.",
+  "registryDependencies": [
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/tooltip.tsx",
+      "content": "'use client'\n\nimport { staticStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as TooltipPrimitive from '@radix-ui/react-tooltip'\n\nimport * as React from 'react'\n\nfunction TooltipProvider({\n  delayDuration = 0,\n  ...props\n}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {\n  return (\n    // eslint-disable-next-line react/no-context-provider\n    <TooltipPrimitive.Provider\n      data-slot=\"tooltip-provider\"\n      delayDuration={delayDuration}\n      {...props}\n    />\n  )\n}\n\nfunction Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {\n  return (\n    <TooltipProvider>\n      <TooltipPrimitive.Root\n        data-slot=\"tooltip\"\n        {...props}\n      />\n    </TooltipProvider>\n  )\n}\n\nfunction TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {\n  return (\n    <TooltipPrimitive.Trigger\n      data-slot=\"tooltip-trigger\"\n      {...props}\n    />\n  )\n}\n\nfunction TooltipContent({\n  className,\n  sideOffset = 4,\n  children,\n  ...props\n}: React.ComponentProps<typeof TooltipPrimitive.Content>) {\n  return (\n    <TooltipPrimitive.Portal>\n      <TooltipPrimitive.Content\n        data-slot=\"tooltip-content\"\n        sideOffset={sideOffset}\n        className={cn(\n          staticStyles.base,\n          staticStyles.variant.default,\n          `\n            animate-in z-50 p-0 px-3 py-1.5 text-sm text-balance\n            data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-2\n            data-[side=bottom]:slide-in-from-top-2\n            data-[side=left]:slide-in-from-right-2\n            data-[side=right]:slide-in-from-left-2\n            data-[side=top]:slide-in-from-bottom-2\n          `,\n          className,\n        )}\n        {...props}\n      >\n        {children}\n        {/* <TooltipPrimitive.Arrow className={`\n          bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)]\n          rotate-45 rounded-[2px]\n        `}\n        /> */}\n      </TooltipPrimitive.Content>\n    </TooltipPrimitive.Portal>\n  )\n}\n\nexport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}
