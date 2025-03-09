@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Schibsted_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const sans = IBM_Plex_Sans({
+const sans = Schibsted_Grotesk({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-sans',
@@ -15,7 +15,9 @@ export const metadata: Metadata = {
   description: 'mieru : jamie\'s personal ui kit',
 }
 
-export default function RootLayout() {
+export default function RootLayout({ children }: {
+  children: React.ReactNode
+}) {
   return (
     <html
       lang="en"
@@ -34,10 +36,10 @@ export default function RootLayout() {
               className="absolute top-4 left-4"
             />
           )}
-          {/* {children} */}
-          <div className="grid h-screen place-items-center text-xs">
+          {children}
+          {/* <div className="grid h-screen place-items-center text-xs">
             <p>mieru 🎀</p>
-          </div>
+          </div> */}
         </Providers>
       </body>
     </html>
