@@ -15,14 +15,22 @@ function Checkbox({
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.default,
-        'active:data-[state=checked]:bg-primary/90 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary size-4 cursor-default rounded-sm transition-shadow',
+        `
+          active:data-[state=checked]:bg-primary/90
+          data-[state=checked]:bg-primary
+          data-[state=checked]:text-primary-foreground
+          data-[state=checked]:border-primary
+          size-4 cursor-default rounded-sm transition-shadow
+        `,
         className,
       )}
       {...props}
     >
       <CheckboxPrimitive.Indicator
         data-slot="checkbox-indicator"
-        className="flex items-center justify-center text-current transition-none"
+        className={`
+          flex items-center justify-center text-current transition-none
+        `}
       >
         <Icon
           icon="ph:check-bold"

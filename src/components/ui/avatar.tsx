@@ -18,7 +18,10 @@ function Avatar({
         staticStyles.base,
         staticStyles.variant.default,
         'relative flex size-8 shrink-0 overflow-hidden rounded-full p-0',
-        square && 'rounded-sm *:data-[slot=avatar-fallback]:rounded-sm',
+        square && `
+          rounded-sm
+          *:data-[slot=avatar-fallback]:rounded-sm
+        `,
         className,
       )}
       {...props}

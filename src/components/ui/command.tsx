@@ -15,7 +15,7 @@ function Command({
       className={cn(
         staticStyles.base,
         staticStyles.variant.default,
-        'p-0 overflow-hidden flex h-full w-full flex-col',
+        'flex h-full w-full flex-col overflow-hidden p-0',
         className,
       )}
       {...props}
@@ -76,8 +76,7 @@ function CommandInput({
         className={cn(
           `
             placeholder:text-muted-foreground
-            flex h-10 w-full rounded bg-transparent py-3 text-sm
-            outline-hidden
+            flex h-10 w-full rounded bg-transparent py-3 text-sm outline-hidden
             disabled:cursor-not-allowed disabled:opacity-50
           `,
           className,
@@ -165,8 +164,8 @@ function CommandItem({
           data-[selected=true]:text-accent-foreground
           [&_svg:not([class*='text-'])]:text-muted-foreground
           [&_svg:not([class*='size-'])]:size-4
-          relative flex cursor-default items-center gap-2 rounded  px-2  py-1 text-sm
-          outline-hidden transition-all select-none
+          relative flex cursor-default items-center gap-2 rounded px-2 py-1
+          text-sm outline-hidden transition-all select-none
           data-[disabled=true]:pointer-events-none
           data-[disabled=true]:opacity-50
           [&_svg]:pointer-events-none [&_svg]:shrink-0

@@ -26,7 +26,10 @@ function Calendar({
           buttonVariants({
             variant: 'outline',
           }),
-          'size-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+          `
+            size-7 bg-transparent p-0 opacity-50
+            hover:opacity-100
+          `,
         ),
         nav_button_previous: 'absolute left-1',
         nav_button_next: 'absolute right-1',
@@ -36,16 +39,29 @@ function Calendar({
           'text-muted-foreground rounded w-8 font-normal text-xs',
         row: 'flex w-full mt-2',
         cell: cn(
-          '[&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r relative text-center text-sm focus-within:relative focus-within:z-20',
+          `
+            [&:has([aria-selected])]:bg-accent
+            [&:has([aria-selected].day-range-end)]:rounded-r
+            relative text-center text-sm
+            focus-within:relative focus-within:z-20
+          `,
           props.mode === 'range'
-            ? '[&:has(>.day-range-end)]:rounded-r [&:has(>.day-range-start)]:rounded-l first:[&:has([aria-selected])]:rounded-l last:[&:has([aria-selected])]:rounded-r'
+            ? `
+              [&:has(>.day-range-end)]:rounded-r
+              [&:has(>.day-range-start)]:rounded-l
+              first:[&:has([aria-selected])]:rounded-l
+              last:[&:has([aria-selected])]:rounded-r
+            `
             : '[&:has([aria-selected])]:rounded',
         ),
         day: cn(
           buttonVariants({
             variant: 'ghost',
           }),
-          'size-8 p-1 font-normal aria-selected:opacity-100',
+          `
+            size-8 p-1 font-normal
+            aria-selected:opacity-100
+          `,
         ),
         day_range_start:
           'day-range-start aria-selected:bg-primary aria-selected:text-primary-foreground',

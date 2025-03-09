@@ -11,6 +11,7 @@ function ComponentCards() {
         }).map((_, i) => {
           return (
             <div
+              // eslint-disable-next-line react/no-array-index-key
               key={i}
 
               className="flex flex-col gap-2"
