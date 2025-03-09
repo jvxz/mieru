@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin "tailwindcss-animate";
+@plugin 'tailwind-scrollbar';
 
 @custom-variant dark (&:is(.dark *));
 @theme {
@@ -59,6 +60,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --animate-accordion-down: accordion-down 0.15s;
   --animate-accordion-up: accordion-up 0.15s;
+  --animate-caret-blink: caret-blink 1s ease-out infinite;
 
   @keyframes accordion-down {
     from {
@@ -85,7 +87,7 @@
 :root {
   --background: hsl(0 0% 100%);
   --foreground: hsl(240 10% 3.9%);
-  --card: hsl(0 0% 97%);
+  --card: hsl(0 0% 98.5%);
   --card-foreground: hsl(240 10% 3.9%);
   --popover: hsl(0 0% 100%);
   --popover-foreground: hsl(240 10% 3.9%);
@@ -95,7 +97,7 @@
   --secondary-foreground: hsl(240 5.9% 10%);
   --muted: hsl(240 4.8% 95.9%);
   --muted-foreground: hsl(240 3.8% 46.1%);
-  --accent: hsl(240 4.8% 95.9%);
+  --accent: hsl(240 4.8% 93.5%);
   --accent-foreground: hsl(240 5.9% 10%);
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: hsl(0 0% 98%);
@@ -123,7 +125,7 @@
 .dark {
   --background: hsl(240 10% 3.9%);
   --foreground: hsl(0 0% 98%);
-  --card: hsl(240 10% 7%);
+  --card: hsl(240 10% 5%);
   --card-foreground: hsl(0 0% 98%);
   --popover: hsl(240 10% 3.9%);
   --popover-foreground: hsl(0 0% 98%);
@@ -157,9 +159,15 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 underline-offset-2;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes caret-blink {
+  0%, 70%, 100% { opacity: 1; }
+  20%, 50% { opacity: 0; }
+}
+
