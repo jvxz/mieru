@@ -36,6 +36,7 @@ export default antfu({
     'readable-tailwind/no-duplicate-classes': 'error',
     'readable-tailwind/sort-classes': 'error',
     'readable-tailwind/no-unnecessary-whitespace': 'error',
+    'readable-tailwind/multiline': 'error',
 
     'react/prefer-shorthand-boolean': 'error',
     'react/no-array-index-key': 'error',
@@ -48,6 +49,7 @@ export default antfu({
     'react-dom/no-unknown-property': 'error',
 
     'style/multiline-ternary': ['error', 'always-multiline'],
+    'style/quotes': ['error', 'single'],
     'style/padding-line-between-statements': [
       'error',
       {
