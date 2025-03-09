@@ -18,7 +18,7 @@ const interactiveStyles = {
 const staticStyles = {
   base: 'rounded p-5 shadow duration-100',
   variant: {
-    default: 'bg-card border',
+    default: 'bg-card border text-card-foreground',
     destructive: 'bg-card border-destructive text-destructive border [&>svg]:text-current',
   },
 }
