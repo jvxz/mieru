@@ -36,7 +36,6 @@ export default antfu({
     'readable-tailwind/no-duplicate-classes': 'error',
     'readable-tailwind/sort-classes': 'error',
     'readable-tailwind/no-unnecessary-whitespace': 'error',
-    'readable-tailwind/multiline': 'error',
 
     'react/prefer-shorthand-boolean': 'error',
     'react/no-array-index-key': 'error',
