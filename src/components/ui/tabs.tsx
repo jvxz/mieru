@@ -1,4 +1,5 @@
 'use client'
+import type { ComponentProps } from 'react'
 import { interactiveStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import * as TabsPrimitive from '@radix-ui/react-tabs'
@@ -6,7 +7,7 @@ import * as TabsPrimitive from '@radix-ui/react-tabs'
 function Tabs({
   className,
   ...props
-}: React.ComponentProps<typeof TabsPrimitive.Root>) {
+}: ComponentProps<typeof TabsPrimitive.Root>) {
   return (
     <TabsPrimitive.Root
       data-slot="tabs"
@@ -19,14 +20,14 @@ function Tabs({
 function TabsList({
   className,
   ...props
-}: React.ComponentProps<typeof TabsPrimitive.List>) {
+}: ComponentProps<typeof TabsPrimitive.List>) {
   return (
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
         staticStyles.base,
         staticStyles.variant.default,
-        'inline-flex w-fit items-center justify-center gap-1 p-1',
+        'relative inline-flex w-fit items-center justify-center p-0',
         className,
       )}
       {...props}
@@ -37,20 +38,15 @@ function TabsList({
 function TabsTrigger({
   className,
   ...props
-}: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
+}: ComponentProps<typeof TabsPrimitive.Trigger>) {
   return (
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.default,
-        `
-          data-[state=active]:bg-primary
-          data-[state=active]:text-primary-foreground data-[state=active]:shadow
-          text-foreground/70 inline-flex flex-1 cursor-default items-center
-          justify-center gap-1.5 border-0 bg-transparent px-2 py-1.5 text-sm
-          shadow-none
-        `,
+        'text-muted-foreground relative inline-flex flex-1 cursor-default items-center justify-center border-0 bg-transparent px-2 py-1 text-sm data-[state=active]:text-foreground',
+        'data-[state=active]:before:bg-foreground before:absolute before:top-[calc(100%-1px)] before:right-[10%] before:left-[10%] before:h-px before:rounded-full before:bg-transparent before:transition-all before:duration-100 before:ease-in-out before:content-[""]',
         className,
       )}
       {...props}
@@ -61,7 +57,7 @@ function TabsTrigger({
 function TabsContent({
   className,
   ...props
-}: React.ComponentProps<typeof TabsPrimitive.Content>) {
+}: ComponentProps<typeof TabsPrimitive.Content>) {
   return (
     <TabsPrimitive.Content
       data-slot="tabs-content"
