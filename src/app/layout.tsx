@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { Schibsted_Grotesk } from 'next/font/google'
+import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
 
-const sans = Schibsted_Grotesk({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
+  variable: '--font-ibm-plex-sans',
   weight: ['400', '500', '600', '700'],
-  variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
@@ -21,15 +21,17 @@ export default function RootLayout({ children }: {
   return (
     <html
       lang="en"
-      className={sans.variable}
+      className={ibmPlexSans.variable}
     >
-      <head>
-        <script
-          crossOrigin="anonymous"
-          src="//unpkg.com/react-scan/dist/auto.global.js"
-        />
-      </head>
-      <body className="font-sans">
+      {process.env.NODE_ENV === 'development' && (
+        <head>
+          <script
+            crossOrigin="anonymous"
+            src="//unpkg.com/react-scan/dist/auto.global.js"
+          />
+        </head>
+      )}
+      <body className="font-ibm-plex-sans">
         <Providers>
           {process.env.NODE_ENV === 'development' && (
             <ThemeToggle
@@ -37,9 +39,6 @@ export default function RootLayout({ children }: {
             />
           )}
           {children}
-          {/* <div className="grid h-screen place-items-center text-xs">
-            <p>mieru 🎀</p>
-          </div> */}
         </Providers>
       </body>
     </html>
