@@ -38,7 +38,8 @@ export default function RootLayout({ children }: {
               className="absolute top-4 left-4"
             />
           )}
-          {children}
+          {/* {children} */}
+          <div className="grid h-screen place-items-center">soon</div>
         </Providers>
       </body>
     </html>
