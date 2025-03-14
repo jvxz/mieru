@@ -1,5 +1,5 @@
 'use client'
-import { type ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import { interactiveStyles, popoverStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
@@ -15,7 +15,7 @@ function Menubar({
       className={cn(
         staticStyles.base,
         staticStyles.variant.default,
-        "flex h-9 items-center gap-1 p-1",
+        'flex h-9 items-center gap-1 p-1',
         className,
       )}
       {...props}
@@ -69,7 +69,7 @@ function MenubarTrigger({
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.ghost,
-        "flex cursor-default items-center px-2 py-1 text-sm transition-all",
+        'flex cursor-default items-center px-2 py-1 text-sm transition-all',
         className,
       )}
       {...props}
@@ -93,7 +93,7 @@ function MenubarContent({
         sideOffset={sideOffset}
         className={cn(
           popoverStyles.content,
-          "data-[state=open]:slide-in-from-top-2 z-50 min-w-[12rem] overflow-hidden",
+          'data-[state=open]:slide-in-from-top-2 z-50 min-w-[12rem] overflow-hidden',
           className,
         )}
         {...props}
@@ -136,7 +136,7 @@ function MenubarCheckboxItem({
       data-slot="menubar-checkbox-item"
       className={cn(
         popoverStyles.item,
-        "pl-8",
+        'pl-8',
         className,
       )}
       checked={checked}
@@ -165,7 +165,7 @@ function MenubarRadioItem({
       data-slot="menubar-radio-item"
       className={cn(
         popoverStyles.item,
-        "pl-8",
+        'pl-8',
         className,
       )}
       {...props}
@@ -195,7 +195,7 @@ function MenubarLabel({
       data-slot="menubar-label"
       data-inset={inset}
       className={cn(
-        "px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
+        'px-2 py-1.5 text-sm font-medium data-[inset]:pl-8',
         className,
       )}
       {...props}
@@ -210,7 +210,7 @@ function MenubarSeparator({
   return (
     <MenubarPrimitive.Separator
       data-slot="menubar-separator"
-      className={cn("-mx-1 my-1 h-px bg-border", className)}
+      className={cn('bg-border -mx-1 my-1 h-px', className)}
       {...props}
     />
   )
@@ -224,7 +224,7 @@ function MenubarShortcut({
     <span
       data-slot="menubar-shortcut"
       className={cn(
-        "ml-auto text-xs tracking-widest text-muted-foreground",
+        'text-muted-foreground ml-auto text-xs tracking-widest',
         className,
       )}
       {...props}
@@ -255,7 +255,7 @@ function MenubarSubTrigger({
       data-inset={inset}
       className={cn(
         popoverStyles.item,
-        "data-[inset]:pl-8",
+        'data-[inset]:pl-8',
         className,
       )}
       {...props}
@@ -278,7 +278,7 @@ function MenubarSubContent({
       data-slot="menubar-sub-content"
       className={cn(
         popoverStyles.content,
-        "z-50 min-w-[12rem] overflow-hidden",
+        'z-50 min-w-[12rem] overflow-hidden',
         className,
       )}
       {...props}
