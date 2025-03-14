@@ -4,12 +4,28 @@
   "homepage": "https://mieru.twirl.sh",
   "items": [
     {
+      "name": "styles-abstraction",
+      "type": "registry:lib",
+      "title": "styles abstraction",
+      "description": "styles abstraction utility. allows for easy global style changes.",
+      "files": [
+        {
+          "path": "src/lib/styles.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
       "name": "accordion",
       "type": "registry:component",
       "title": "accordion",
       "description": "accordion component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-accordion"
+      ],
       "registryDependencies": [
-        "accordion"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -23,8 +39,13 @@
       "type": "registry:component",
       "title": "alert-dialog",
       "description": "alert dialog component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-alert-dialog"
+      ],
       "registryDependencies": [
-        "alert-dialog"
+        "http://localhost:3000/r/styles-abstraction.json",
+        "http://localhost:3000/r/button.json"
       ],
       "files": [
         {
@@ -39,7 +60,7 @@
       "title": "alert",
       "description": "alert component.",
       "registryDependencies": [
-        "alert"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -53,8 +74,8 @@
       "type": "registry:component",
       "title": "aspect-ratio",
       "description": "aspect ratio component.",
-      "registryDependencies": [
-        "aspect-ratio"
+      "dependencies": [
+        "@radix-ui/react-aspect-ratio"
       ],
       "files": [
         {
@@ -68,8 +89,11 @@
       "type": "registry:component",
       "title": "avatar",
       "description": "avatar component.",
+      "dependencies": [
+        "@radix-ui/react-avatar"
+      ],
       "registryDependencies": [
-        "avatar"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -83,8 +107,11 @@
       "type": "registry:component",
       "title": "badge",
       "description": "badge component.",
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
       "registryDependencies": [
-        "badge"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -98,8 +125,9 @@
       "type": "registry:component",
       "title": "breadcrumb",
       "description": "breadcrumb component.",
-      "registryDependencies": [
-        "breadcrumb"
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-slot"
       ],
       "files": [
         {
@@ -113,27 +141,16 @@
       "type": "registry:component",
       "title": "button",
       "description": "button component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-slot"
+      ],
       "registryDependencies": [
-        "button"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
           "path": "src/components/ui/button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "calendar",
-      "type": "registry:component",
-      "title": "calendar",
-      "description": "calendar component.",
-      "registryDependencies": [
-        "calendar"
-      ],
-      "files": [
-        {
-          "path": "src/components/ui/calendar.tsx",
           "type": "registry:component"
         }
       ]
@@ -144,7 +161,7 @@
       "title": "card",
       "description": "card component.",
       "registryDependencies": [
-        "card"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -158,8 +175,13 @@
       "type": "registry:component",
       "title": "carousel",
       "description": "carousel component.",
+      "dependencies": [
+        "@iconify/react",
+        "embla-carousel-react"
+      ],
       "registryDependencies": [
-        "carousel"
+        "http://localhost:3000/r/styles-abstraction.json",
+        "http://localhost:3000/r/button.json"
       ],
       "files": [
         {
@@ -173,8 +195,12 @@
       "type": "registry:component",
       "title": "checkbox",
       "description": "checkbox component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-checkbox"
+      ],
       "registryDependencies": [
-        "checkbox"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -188,8 +214,8 @@
       "type": "registry:component",
       "title": "collapsible",
       "description": "collapsible component.",
-      "registryDependencies": [
-        "collapsible"
+      "dependencies": [
+        "@radix-ui/react-collapsible"
       ],
       "files": [
         {
@@ -203,8 +229,12 @@
       "type": "registry:component",
       "title": "command",
       "description": "command component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-command"
+      ],
       "registryDependencies": [
-        "command"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -218,8 +248,12 @@
       "type": "registry:component",
       "title": "context-menu",
       "description": "context menu component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-context-menu"
+      ],
       "registryDependencies": [
-        "context-menu"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -233,8 +267,12 @@
       "type": "registry:component",
       "title": "dialog",
       "description": "dialog component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-dialog"
+      ],
       "registryDependencies": [
-        "dialog"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -248,8 +286,11 @@
       "type": "registry:component",
       "title": "drawer",
       "description": "drawer component.",
+      "dependencies": [
+        "vaul"
+      ],
       "registryDependencies": [
-        "drawer"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -263,8 +304,12 @@
       "type": "registry:component",
       "title": "dropdown-menu",
       "description": "dropdown menu component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-dropdown-menu"
+      ],
       "registryDependencies": [
-        "dropdown-menu"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -278,8 +323,14 @@
       "type": "registry:component",
       "title": "form",
       "description": "form component.",
+      "dependencies": [
+        "@iconify/react",
+        "react-hook-form",
+        "@radix-ui/react-label"
+      ],
       "registryDependencies": [
-        "form"
+        "http://localhost:3000/r/styles-abstraction.json",
+        "http://localhost:3000/r/label.json"
       ],
       "files": [
         {
@@ -293,8 +344,11 @@
       "type": "registry:component",
       "title": "hover-card",
       "description": "hover card component.",
+      "dependencies": [
+        "@radix-ui/react-hover-card"
+      ],
       "registryDependencies": [
-        "hover-card"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -308,8 +362,12 @@
       "type": "registry:component",
       "title": "input-otp",
       "description": "input OTP component.",
-      "registryDependencies": [
+      "dependencies": [
+        "@iconify/react",
         "input-otp"
+      ],
+      "registryDependencies": [
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -324,7 +382,7 @@
       "title": "input",
       "description": "input component.",
       "registryDependencies": [
-        "input"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -338,8 +396,8 @@
       "type": "registry:component",
       "title": "label",
       "description": "label component.",
-      "registryDependencies": [
-        "label"
+      "dependencies": [
+        "@radix-ui/react-label"
       ],
       "files": [
         {
@@ -353,8 +411,12 @@
       "type": "registry:component",
       "title": "menubar",
       "description": "menubar component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-menubar"
+      ],
       "registryDependencies": [
-        "menubar"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -364,27 +426,16 @@
       ]
     },
     {
-      "name": "navigation-menu",
-      "type": "registry:component",
-      "title": "navigation-menu",
-      "description": "navigation menu component.",
-      "registryDependencies": [
-        "navigation-menu"
-      ],
-      "files": [
-        {
-          "path": "src/components/ui/navigation-menu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "pagination",
       "type": "registry:component",
       "title": "pagination",
       "description": "pagination component.",
+      "dependencies": [
+        "@iconify/react"
+      ],
       "registryDependencies": [
-        "pagination"
+        "http://localhost:3000/r/styles-abstraction.json",
+        "http://localhost:3000/r/button.json"
       ],
       "files": [
         {
@@ -398,8 +449,11 @@
       "type": "registry:component",
       "title": "popover",
       "description": "popover component.",
+      "dependencies": [
+        "@radix-ui/react-popover"
+      ],
       "registryDependencies": [
-        "popover"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -413,8 +467,8 @@
       "type": "registry:component",
       "title": "progress",
       "description": "progress component.",
-      "registryDependencies": [
-        "progress"
+      "dependencies": [
+        "@radix-ui/react-progress"
       ],
       "files": [
         {
@@ -428,8 +482,12 @@
       "type": "registry:component",
       "title": "radio-group",
       "description": "radio group component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-radio-group"
+      ],
       "registryDependencies": [
-        "radio-group"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -443,8 +501,9 @@
       "type": "registry:component",
       "title": "resizable",
       "description": "resizable component.",
-      "registryDependencies": [
-        "resizable"
+      "dependencies": [
+        "@iconify/react",
+        "react-resizable-panels"
       ],
       "files": [
         {
@@ -458,8 +517,8 @@
       "type": "registry:component",
       "title": "scroll-area",
       "description": "scroll area component.",
-      "registryDependencies": [
-        "scroll-area"
+      "dependencies": [
+        "@radix-ui/react-scroll-area"
       ],
       "files": [
         {
@@ -473,8 +532,12 @@
       "type": "registry:component",
       "title": "select",
       "description": "select component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-select"
+      ],
       "registryDependencies": [
-        "select"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -488,8 +551,8 @@
       "type": "registry:component",
       "title": "separator",
       "description": "separator component.",
-      "registryDependencies": [
-        "separator"
+      "dependencies": [
+        "@radix-ui/react-separator"
       ],
       "files": [
         {
@@ -503,8 +566,12 @@
       "type": "registry:component",
       "title": "sheet",
       "description": "sheet component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-dialog"
+      ],
       "registryDependencies": [
-        "sheet"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -514,28 +581,10 @@
       ]
     },
     {
-      "name": "sidebar",
-      "type": "registry:component",
-      "title": "sidebar",
-      "description": "sidebar component.",
-      "registryDependencies": [
-        "sidebar"
-      ],
-      "files": [
-        {
-          "path": "src/components/ui/sidebar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "skeleton",
       "type": "registry:component",
       "title": "skeleton",
       "description": "skeleton component.",
-      "registryDependencies": [
-        "skeleton"
-      ],
       "files": [
         {
           "path": "src/components/ui/skeleton.tsx",
@@ -548,8 +597,11 @@
       "type": "registry:component",
       "title": "slider",
       "description": "slider component.",
+      "dependencies": [
+        "@radix-ui/react-slider"
+      ],
       "registryDependencies": [
-        "slider"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -563,7 +615,7 @@
       "type": "registry:component",
       "title": "sonner",
       "description": "sonner component.",
-      "registryDependencies": [
+      "dependencies": [
         "sonner"
       ],
       "files": [
@@ -578,8 +630,11 @@
       "type": "registry:component",
       "title": "switch",
       "description": "switch component.",
+      "dependencies": [
+        "@radix-ui/react-switch"
+      ],
       "registryDependencies": [
-        "switch"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -593,9 +648,6 @@
       "type": "registry:component",
       "title": "table",
       "description": "table component.",
-      "registryDependencies": [
-        "table"
-      ],
       "files": [
         {
           "path": "src/components/ui/table.tsx",
@@ -608,8 +660,11 @@
       "type": "registry:component",
       "title": "tabs",
       "description": "tabs component.",
+      "dependencies": [
+        "@radix-ui/react-tabs"
+      ],
       "registryDependencies": [
-        "tabs"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -624,7 +679,7 @@
       "title": "textarea",
       "description": "textarea component.",
       "registryDependencies": [
-        "textarea"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -638,8 +693,11 @@
       "type": "registry:component",
       "title": "toggle-group",
       "description": "toggle group component.",
+      "dependencies": [
+        "@radix-ui/react-toggle-group"
+      ],
       "registryDependencies": [
-        "toggle-group"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -653,8 +711,11 @@
       "type": "registry:component",
       "title": "toggle",
       "description": "toggle component.",
+      "dependencies": [
+        "@radix-ui/react-toggle"
+      ],
       "registryDependencies": [
-        "toggle"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -668,8 +729,11 @@
       "type": "registry:component",
       "title": "tooltip",
       "description": "tooltip component.",
+      "dependencies": [
+        "@radix-ui/react-tooltip"
+      ],
       "registryDependencies": [
-        "tooltip"
+        "http://localhost:3000/r/styles-abstraction.json"
       ],
       "files": [
         {
