@@ -29,6 +29,9 @@ export default antfu({
   },
 
   rules: {
+    'style/jsx-quotes': ['error', 'prefer-double'],
+    'style/quotes': ['error', 'single'],
+
     '@next/next/no-html-link-for-pages': 'error',
     '@next/next/no-img-element': 'error',
     '@next/next/no-unwanted-polyfillio': 'error',
@@ -48,7 +51,6 @@ export default antfu({
     'react-dom/no-unknown-property': 'error',
 
     'style/multiline-ternary': ['error', 'always-multiline'],
-    'style/quotes': ['error', 'single'],
     'style/padding-line-between-statements': [
       'error',
       {
