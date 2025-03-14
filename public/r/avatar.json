@@ -4,13 +4,16 @@
   "type": "registry:component",
   "title": "avatar",
   "description": "avatar component.",
+  "dependencies": [
+    "@radix-ui/react-avatar"
+  ],
   "registryDependencies": [
-    "avatar"
+    "http://localhost:3000/r/styles-abstraction.json"
   ],
   "files": [
     {
       "path": "src/components/ui/avatar.tsx",
-      "content": "'use client'\nimport { staticStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as AvatarPrimitive from '@radix-ui/react-avatar'\nimport * as React from 'react'\n\nfunction Avatar({\n  className,\n  square = false,\n  ...props\n}: React.ComponentProps<typeof AvatarPrimitive.Root> & {\n  square?: boolean\n}) {\n  return (\n    <AvatarPrimitive.Root\n      data-slot=\"avatar\"\n      className={cn(\n        staticStyles.base,\n        staticStyles.variant.default,\n        'relative flex size-8 shrink-0 overflow-hidden rounded-full p-0',\n        square && 'rounded-sm *:data-[slot=avatar-fallback]:rounded-sm',\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction AvatarImage({\n  className,\n  ...props\n}: React.ComponentProps<typeof AvatarPrimitive.Image>) {\n  return (\n    <AvatarPrimitive.Image\n      data-slot=\"avatar-image\"\n      className={cn('aspect-square size-full', className)}\n      {...props}\n    />\n  )\n}\n\nfunction AvatarFallback({\n  className,\n  ...props\n}: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {\n  return (\n    <AvatarPrimitive.Fallback\n      data-slot=\"avatar-fallback\"\n      className={cn(\n        staticStyles.variant.default,\n        'flex size-full items-center justify-center rounded-full border-0',\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n}\n",
+      "content": "'use client'\nimport type { ComponentProps } from 'react'\nimport { staticStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as AvatarPrimitive from '@radix-ui/react-avatar'\n\nfunction Avatar({\n  className,\n  square = false,\n  ...props\n}: ComponentProps<typeof AvatarPrimitive.Root> & {\n  square?: boolean\n}) {\n  return (\n    <AvatarPrimitive.Root\n      data-slot=\"avatar\"\n      className={cn(staticStyles.base, staticStyles.variant.default, 'relative flex size-8 shrink-0 overflow-hidden rounded-full p-0', square && 'rounded-sm *:data-[slot=avatar-fallback]:rounded-sm', className)}\n      {...props}\n    />\n  )\n}\n\nfunction AvatarImage({\n  className,\n  ...props\n}: ComponentProps<typeof AvatarPrimitive.Image>) {\n  return (\n    <AvatarPrimitive.Image\n      data-slot=\"avatar-image\"\n      className={cn('aspect-square size-full', className)}\n      {...props}\n    />\n  )\n}\n\nfunction AvatarFallback({\n  className,\n  ...props\n}: ComponentProps<typeof AvatarPrimitive.Fallback>) {\n  return (\n    <AvatarPrimitive.Fallback\n      data-slot=\"avatar-fallback\"\n      className={cn(staticStyles.variant.default, 'flex size-full items-center justify-center rounded-full border-0', className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n}\n",
       "type": "registry:component"
     }
   ]

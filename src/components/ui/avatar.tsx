@@ -1,29 +1,20 @@
 'use client'
+import type { ComponentProps } from 'react'
 import { staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'
-import * as React from 'react'
 
 function Avatar({
   className,
   square = false,
   ...props
-}: React.ComponentProps<typeof AvatarPrimitive.Root> & {
+}: ComponentProps<typeof AvatarPrimitive.Root> & {
   square?: boolean
 }) {
   return (
     <AvatarPrimitive.Root
       data-slot="avatar"
-      className={cn(
-        staticStyles.base,
-        staticStyles.variant.default,
-        'relative flex size-8 shrink-0 overflow-hidden rounded-full p-0',
-        square && `
-          rounded-sm
-          *:data-[slot=avatar-fallback]:rounded-sm
-        `,
-        className,
-      )}
+      className={cn(staticStyles.base, staticStyles.variant.default, 'relative flex size-8 shrink-0 overflow-hidden rounded-full p-0', square && 'rounded-sm *:data-[slot=avatar-fallback]:rounded-sm', className)}
       {...props}
     />
   )
@@ -32,7 +23,7 @@ function Avatar({
 function AvatarImage({
   className,
   ...props
-}: React.ComponentProps<typeof AvatarPrimitive.Image>) {
+}: ComponentProps<typeof AvatarPrimitive.Image>) {
   return (
     <AvatarPrimitive.Image
       data-slot="avatar-image"
@@ -45,15 +36,11 @@ function AvatarImage({
 function AvatarFallback({
   className,
   ...props
-}: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {
+}: ComponentProps<typeof AvatarPrimitive.Fallback>) {
   return (
     <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
-      className={cn(
-        staticStyles.variant.default,
-        'flex size-full items-center justify-center rounded-full border-0',
-        className,
-      )}
+      className={cn(staticStyles.variant.default, 'flex size-full items-center justify-center rounded-full border-0', className)}
       {...props}
     />
   )
