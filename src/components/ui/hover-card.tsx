@@ -1,19 +1,21 @@
 'use client'
-import { staticStyles } from '@/lib/styles'
+import type { ComponentProps } from 'react'
+import { popoverStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import * as HoverCardPrimitive from '@radix-ui/react-hover-card'
-import * as React from 'react'
 
-function HoverCard({ ...props }: React.ComponentProps<typeof HoverCardPrimitive.Root>) {
+function HoverCard({ openDelay = 200, closeDelay = 100, ...props }: ComponentProps<typeof HoverCardPrimitive.Root>) {
   return (
     <HoverCardPrimitive.Root
       data-slot="hover-card"
+      openDelay={openDelay}
+      closeDelay={closeDelay}
       {...props}
     />
   )
 }
 
-function HoverCardTrigger({ ...props }: React.ComponentProps<typeof HoverCardPrimitive.Trigger>) {
+function HoverCardTrigger({ ...props }: ComponentProps<typeof HoverCardPrimitive.Trigger>) {
   return (
     <HoverCardPrimitive.Trigger
       data-slot="hover-card-trigger"
@@ -27,26 +29,13 @@ function HoverCardContent({
   align = 'center',
   sideOffset = 4,
   ...props
-}: React.ComponentProps<typeof HoverCardPrimitive.Content>) {
+}: ComponentProps<typeof HoverCardPrimitive.Content>) {
   return (
     <HoverCardPrimitive.Content
       data-slot="hover-card-content"
       align={align}
       sideOffset={sideOffset}
-      className={cn(
-        staticStyles.base,
-        staticStyles.variant.default,
-        `
-          data-[state=open]:animate-in data-[state=open]:fade-in-0
-          data-[state=open]:slide-in-from-top-2
-          data-[side=bottom]:slide-in-from-top-2
-          data-[side=left]:slide-in-from-right-2
-          data-[side=right]:slide-in-from-left-2
-          data-[side=top]:slide-in-from-bottom-2
-          z-50 w-64 p-4
-        `,
-        className,
-      )}
+      className={cn(popoverStyles.content, 'w-64 p-2 text-sm', className)}
       {...props}
     />
   )

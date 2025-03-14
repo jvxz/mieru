@@ -4,13 +4,16 @@
   "type": "registry:component",
   "title": "hover-card",
   "description": "hover card component.",
+  "dependencies": [
+    "@radix-ui/react-hover-card"
+  ],
   "registryDependencies": [
-    "hover-card"
+    "http://localhost:3000/r/styles-abstraction.json"
   ],
   "files": [
     {
       "path": "src/components/ui/hover-card.tsx",
-      "content": "'use client'\nimport { staticStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as HoverCardPrimitive from '@radix-ui/react-hover-card'\nimport * as React from 'react'\n\nfunction HoverCard({ ...props }: React.ComponentProps<typeof HoverCardPrimitive.Root>) {\n  return (\n    <HoverCardPrimitive.Root\n      data-slot=\"hover-card\"\n      {...props}\n    />\n  )\n}\n\nfunction HoverCardTrigger({ ...props }: React.ComponentProps<typeof HoverCardPrimitive.Trigger>) {\n  return (\n    <HoverCardPrimitive.Trigger\n      data-slot=\"hover-card-trigger\"\n      {...props}\n    />\n  )\n}\n\nfunction HoverCardContent({\n  className,\n  align = 'center',\n  sideOffset = 4,\n  ...props\n}: React.ComponentProps<typeof HoverCardPrimitive.Content>) {\n  return (\n    <HoverCardPrimitive.Content\n      data-slot=\"hover-card-content\"\n      align={align}\n      sideOffset={sideOffset}\n      className={cn(\n        staticStyles.base,\n        staticStyles.variant.default,\n        `\n          data-[state=open]:animate-in data-[state=open]:fade-in-0\n          data-[state=open]:slide-in-from-top-2\n          data-[side=bottom]:slide-in-from-top-2\n          data-[side=left]:slide-in-from-right-2\n          data-[side=right]:slide-in-from-left-2\n          data-[side=top]:slide-in-from-bottom-2\n          z-50 w-64 p-4\n        `,\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n}\n",
+      "content": "'use client'\nimport type { ComponentProps } from 'react'\nimport { popoverStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as HoverCardPrimitive from '@radix-ui/react-hover-card'\n\nfunction HoverCard({ openDelay = 200, closeDelay = 100, ...props }: ComponentProps<typeof HoverCardPrimitive.Root>) {\n  return (\n    <HoverCardPrimitive.Root\n      data-slot=\"hover-card\"\n      openDelay={openDelay}\n      closeDelay={closeDelay}\n      {...props}\n    />\n  )\n}\n\nfunction HoverCardTrigger({ ...props }: ComponentProps<typeof HoverCardPrimitive.Trigger>) {\n  return (\n    <HoverCardPrimitive.Trigger\n      data-slot=\"hover-card-trigger\"\n      {...props}\n    />\n  )\n}\n\nfunction HoverCardContent({\n  className,\n  align = 'center',\n  sideOffset = 4,\n  ...props\n}: ComponentProps<typeof HoverCardPrimitive.Content>) {\n  return (\n    <HoverCardPrimitive.Content\n      data-slot=\"hover-card-content\"\n      align={align}\n      sideOffset={sideOffset}\n      className={cn(popoverStyles.content, 'w-64 p-2 text-sm', className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n}\n",
       "type": "registry:component"
     }
   ]
