@@ -5,12 +5,12 @@
   "title": "input",
   "description": "input component.",
   "registryDependencies": [
-    "input"
+    "http://localhost:3000/r/styles-abstraction.json"
   ],
   "files": [
     {
       "path": "src/components/ui/input.tsx",
-      "content": "import { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as React from 'react'\n\nfunction Input({ className, type, ...props }: React.ComponentProps<'input'>) {\n  return (\n    <input\n      type={type}\n      data-slot=\"input\"\n      className={cn(\n        interactiveStyles.base,\n        interactiveStyles.variant.default,\n        interactiveStyles.size.default,\n        `\n          file:text-foreground file:inline-flex file:h-7 file:border-0\n          file:bg-transparent file:text-sm file:font-medium\n          placeholder:text-muted-foreground\n          selection:bg-primary selection:text-primary-foreground\n          focus-visible:border-ring/40 focus-visible:ring-0\n          flex w-full min-w-0 cursor-text px-3 py-1 transition-all\n          md:text-sm\n        `,\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Input }\n",
+      "content": "import type { ComponentProps } from 'react'\nimport { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\n\nfunction Input({ className, type, ...props }: ComponentProps<'input'>) {\n  return (\n    <input\n      type={type}\n      data-slot=\"input\"\n      className={cn(interactiveStyles.base, interactiveStyles.variant.default, interactiveStyles.size.default, 'file:text-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground flex w-full min-w-0 cursor-text px-3 py-1 transition-all focus-visible:ring-0 md:text-sm', className)}\n      {...props}\n    />\n  )\n}\n\nexport { Input }\n",
       "type": "registry:component"
     }
   ]
