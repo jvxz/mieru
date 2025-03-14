@@ -4,6 +4,7 @@ import readableTailwind from 'eslint-plugin-readable-tailwind'
 
 export default antfu({
   react: true,
+  css: true,
   typescript: {
     tsconfigPath: './tsconfig.json',
     overrides: {
@@ -11,10 +12,6 @@ export default antfu({
       'ts/consistent-type-imports': 'error',
       'react/no-leaked-conditional-rendering': 'error',
     },
-  },
-
-  formatters: {
-    css: 'prettier',
   },
 
   ignores: [
