@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
 @import '../lib/css/tw-animate-css.css';
 
@@ -8,8 +8,9 @@
     var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 
-  --font-ibm-plex-sans: var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-ibm-plex-sans:
+    var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
   --text-base: var(--text-base);
   --text-sm: calc(var(--text-base) * 0.875);
@@ -145,7 +146,7 @@
 
   --overlay: hsla(254, 50%, 2.5%, 0.65);
 
-  /* --chart-1: hsl(41, 70%, 50%); 
+  /* --chart-1: hsl(41, 70%, 50%);
   --chart-1: hsl(41, 70%, 50%);
   --chart-2: hsl(185, 65%, 40%);
   --chart-3: hsl(227, 40%, 30%);
