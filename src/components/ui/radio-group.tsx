@@ -1,13 +1,14 @@
 'use client'
+import type { ComponentProps } from 'react'
 import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react/dist/iconify.js'
+import { Icon } from '@iconify/react'
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 
 function RadioGroup({
   className,
   ...props
-}: React.ComponentProps<typeof RadioGroupPrimitive.Root>) {
+}: ComponentProps<typeof RadioGroupPrimitive.Root>) {
   return (
     <RadioGroupPrimitive.Root
       data-slot="radio-group"
@@ -20,17 +21,14 @@ function RadioGroup({
 function RadioGroupItem({
   className,
   ...props
-}: React.ComponentProps<typeof RadioGroupPrimitive.Item>) {
+}: ComponentProps<typeof RadioGroupPrimitive.Item>) {
   return (
     <RadioGroupPrimitive.Item
       data-slot="radio-group-item"
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.default,
-        `
-          aspect-square size-4 shrink-0 cursor-default rounded-full
-          transition-all
-        `,
+        'aspect-square size-4 shrink-0 cursor-default rounded-full transition-all',
         className,
       )}
       {...props}
@@ -41,10 +39,7 @@ function RadioGroupItem({
       >
         <Icon
           icon="ph:circle-fill"
-          className={`
-            fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2
-            -translate-y-1/2
-          `}
+          className="fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2"
         />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>

@@ -4,13 +4,17 @@
   "type": "registry:component",
   "title": "radio-group",
   "description": "radio group component.",
+  "dependencies": [
+    "@iconify/react",
+    "@radix-ui/react-radio-group"
+  ],
   "registryDependencies": [
-    "radio-group"
+    "http://localhost:3000/r/styles-abstraction.json"
   ],
   "files": [
     {
       "path": "src/components/ui/radio-group.tsx",
-      "content": "'use client'\nimport { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport { Icon } from '@iconify/react/dist/iconify.js'\nimport * as RadioGroupPrimitive from '@radix-ui/react-radio-group'\n\nfunction RadioGroup({\n  className,\n  ...props\n}: React.ComponentProps<typeof RadioGroupPrimitive.Root>) {\n  return (\n    <RadioGroupPrimitive.Root\n      data-slot=\"radio-group\"\n      className={cn('grid gap-3', className)}\n      {...props}\n    />\n  )\n}\n\nfunction RadioGroupItem({\n  className,\n  ...props\n}: React.ComponentProps<typeof RadioGroupPrimitive.Item>) {\n  return (\n    <RadioGroupPrimitive.Item\n      data-slot=\"radio-group-item\"\n      className={cn(\n        interactiveStyles.base,\n        interactiveStyles.variant.default,\n        `\n          aspect-square size-4 shrink-0 cursor-default rounded-full\n          transition-all\n        `,\n        className,\n      )}\n      {...props}\n    >\n      <RadioGroupPrimitive.Indicator\n        data-slot=\"radio-group-indicator\"\n        className=\"relative flex items-center justify-center\"\n      >\n        <Icon\n          icon=\"ph:circle-fill\"\n          className={`\n            fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2\n            -translate-y-1/2\n          `}\n        />\n      </RadioGroupPrimitive.Indicator>\n    </RadioGroupPrimitive.Item>\n  )\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
+      "content": "'use client'\nimport type { ComponentProps } from 'react'\nimport { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport { Icon } from '@iconify/react'\nimport * as RadioGroupPrimitive from '@radix-ui/react-radio-group'\n\nfunction RadioGroup({\n  className,\n  ...props\n}: ComponentProps<typeof RadioGroupPrimitive.Root>) {\n  return (\n    <RadioGroupPrimitive.Root\n      data-slot=\"radio-group\"\n      className={cn('grid gap-3', className)}\n      {...props}\n    />\n  )\n}\n\nfunction RadioGroupItem({\n  className,\n  ...props\n}: ComponentProps<typeof RadioGroupPrimitive.Item>) {\n  return (\n    <RadioGroupPrimitive.Item\n      data-slot=\"radio-group-item\"\n      className={cn(\n        interactiveStyles.base,\n        interactiveStyles.variant.default,\n        'aspect-square size-4 shrink-0 cursor-default rounded-full transition-all',\n        className,\n      )}\n      {...props}\n    >\n      <RadioGroupPrimitive.Indicator\n        data-slot=\"radio-group-indicator\"\n        className=\"relative flex items-center justify-center\"\n      >\n        <Icon\n          icon=\"ph:circle-fill\"\n          className=\"fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2\"\n        />\n      </RadioGroupPrimitive.Indicator>\n    </RadioGroupPrimitive.Item>\n  )\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
       "type": "registry:component"
     }
   ]
