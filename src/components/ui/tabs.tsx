@@ -27,7 +27,7 @@ function TabsList({
       className={cn(
         staticStyles.base,
         staticStyles.variant.default,
-        'relative inline-flex w-fit items-center justify-center p-0',
+        'relative inline-flex w-fit items-center justify-center gap-4 p-0 px-4',
         className,
       )}
       {...props}
@@ -45,8 +45,8 @@ function TabsTrigger({
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.default,
-        'text-muted-foreground relative inline-flex flex-1 cursor-default items-center justify-center border-0 bg-transparent px-2 py-1 text-sm data-[state=active]:text-foreground',
-        'data-[state=active]:before:bg-foreground before:absolute before:top-[calc(100%-1px)] before:right-[10%] before:left-[10%] before:h-px before:rounded-full before:bg-transparent before:transition-all before:duration-100 before:ease-in-out before:content-[""]',
+        'text-muted-foreground relative inline-flex flex-1 cursor-default items-center justify-center border-0 bg-transparent py-1 text-sm data-[state=active]:text-foreground',
+        'data-[state=active]:before:bg-foreground before:absolute before:inset-x-0 before:top-[calc(100%-1px)] before:h-px before:rounded-full before:bg-transparent before:transition-all before:duration-100 before:ease-in-out before:content-[""]',
         className,
       )}
       {...props}
