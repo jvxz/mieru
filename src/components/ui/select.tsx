@@ -1,11 +1,11 @@
 'use client'
+import type { ComponentProps } from 'react'
 import { interactiveStyles, popoverStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
 import * as SelectPrimitive from '@radix-ui/react-select'
-import * as React from 'react'
 
-function Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>) {
+function Select({ ...props }: ComponentProps<typeof SelectPrimitive.Root>) {
   return (
     <SelectPrimitive.Root
       data-slot="select"
@@ -14,7 +14,7 @@ function Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>)
   )
 }
 
-function SelectGroup({ ...props }: React.ComponentProps<typeof SelectPrimitive.Group>) {
+function SelectGroup({ ...props }: ComponentProps<typeof SelectPrimitive.Group>) {
   return (
     <SelectPrimitive.Group
       data-slot="select-group"
@@ -23,7 +23,7 @@ function SelectGroup({ ...props }: React.ComponentProps<typeof SelectPrimitive.G
   )
 }
 
-function SelectValue({ ...props }: React.ComponentProps<typeof SelectPrimitive.Value>) {
+function SelectValue({ ...props }: ComponentProps<typeof SelectPrimitive.Value>) {
   return (
     <SelectPrimitive.Value
       data-slot="select-value"
@@ -36,22 +36,14 @@ function SelectTrigger({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Trigger>) {
+}: ComponentProps<typeof SelectPrimitive.Trigger>) {
   return (
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.default,
-        `
-          data-[placeholder]:text-muted-foreground
-          flex h-9 w-fit items-center justify-between gap-2 px-3 py-2 text-sm
-          whitespace-nowrap
-          *:data-[slot=select-value]:line-clamp-1
-          *:data-[slot=select-value]:flex
-          *:data-[slot=select-value]:items-center
-          *:data-[slot=select-value]:gap-2
-        `,
+        'data-[placeholder]:text-muted-foreground flex h-9 w-fit items-center justify-between gap-2 px-3 py-2 text-sm whitespace-nowrap *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2',
         className,
       )}
       {...props}
@@ -72,25 +64,16 @@ function SelectContent({
   children,
   position = 'popper',
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Content>) {
+}: ComponentProps<typeof SelectPrimitive.Content>) {
   return (
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
         data-slot="select-content"
         className={cn(
           popoverStyles.content,
-          `
-            data-[state=open]:slide-in-from-top-2
-            relative z-50 max-h-96 min-w-[var(--radix-select-trigger-width)]
-            overflow-hidden p-0
-          `,
+          'data-[state=open]:slide-in-from-top-2 relative z-50 max-h-96 min-w-[var(--radix-select-trigger-width)] overflow-hidden p-0',
           position === 'popper'
-          && `
-            data-[side=bottom]:translate-y-1
-            data-[side=left]:-translate-x-1
-            data-[side=right]:translate-x-1
-            data-[side=top]:-translate-y-1
-          `,
+          && 'data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
           className,
         )}
         position={position}
@@ -99,10 +82,7 @@ function SelectContent({
         <SelectScrollUpButton />
         <SelectPrimitive.Viewport
           className={cn('p-1', position === 'popper'
-          && `
-            h-[var(--radix-select-trigger-height)] w-full
-            min-w-[var(--radix-select-trigger-width)] scroll-my-1
-          `)}
+          && 'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1')}
         >
           {children}
         </SelectPrimitive.Viewport>
@@ -115,7 +95,7 @@ function SelectContent({
 function SelectLabel({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Label>) {
+}: ComponentProps<typeof SelectPrimitive.Label>) {
   return (
     <SelectPrimitive.Label
       data-slot="select-label"
@@ -129,28 +109,22 @@ function SelectItem({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Item>) {
+}: ComponentProps<typeof SelectPrimitive.Item>) {
   return (
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
         popoverStyles.item,
-        `
-          relative flex w-full cursor-default items-center gap-2
-          *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2
-        `,
+        'relative flex w-full cursor-default items-center gap-2 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2',
         className,
       )}
       {...props}
     >
-      <span className={`
-        absolute right-2 flex size-3.5 items-center justify-center
-      `}
-      >
+      <span className="absolute right-2 flex size-3.5 items-center justify-center">
         <SelectPrimitive.ItemIndicator>
           <Icon
             icon="ph:check"
-            className="size-4"
+            className="text-foreground size-4"
           />
         </SelectPrimitive.ItemIndicator>
       </span>
@@ -162,7 +136,7 @@ function SelectItem({
 function SelectSeparator({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Separator>) {
+}: ComponentProps<typeof SelectPrimitive.Separator>) {
   return (
     <SelectPrimitive.Separator
       data-slot="select-separator"
@@ -175,7 +149,7 @@ function SelectSeparator({
 function SelectScrollUpButton({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.ScrollUpButton>) {
+}: ComponentProps<typeof SelectPrimitive.ScrollUpButton>) {
   return (
     <SelectPrimitive.ScrollUpButton
       data-slot="select-scroll-up-button"
@@ -196,7 +170,7 @@ function SelectScrollUpButton({
 function SelectScrollDownButton({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.ScrollDownButton>) {
+}: ComponentProps<typeof SelectPrimitive.ScrollDownButton>) {
   return (
     <SelectPrimitive.ScrollDownButton
       data-slot="select-scroll-down-button"
