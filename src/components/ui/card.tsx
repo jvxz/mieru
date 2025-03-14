@@ -1,23 +1,18 @@
+import type { ComponentProps } from 'react'
 import { staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import * as React from 'react'
 
-function Card({ className, ...props }: React.ComponentProps<'div'>) {
+function Card({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="card"
-      className={cn(
-        staticStyles.base,
-        staticStyles.variant.default,
-        'flex flex-col gap-5',
-        className,
-      )}
+      className={cn(staticStyles.base, staticStyles.variant.default, 'flex flex-col gap-5', className)}
       {...props}
     />
   )
 }
 
-function CardHeader({ className, ...props }: React.ComponentProps<'div'>) {
+function CardHeader({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-header"
@@ -27,7 +22,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<'div'>) {
   )
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<'div'>) {
+function CardTitle({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-title"
@@ -37,7 +32,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<'div'>) {
   )
 }
 
-function CardDescription({ className, ...props }: React.ComponentProps<'div'>) {
+function CardDescription({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-description"
@@ -47,17 +42,16 @@ function CardDescription({ className, ...props }: React.ComponentProps<'div'>) {
   )
 }
 
-function CardContent({ className, ...props }: React.ComponentProps<'div'>) {
+function CardContent({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-content"
-      // className={cn('px-6', className)}
       {...props}
     />
   )
 }
 
-function CardFooter({ className, ...props }: React.ComponentProps<'div'>) {
+function CardFooter({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-footer"
