@@ -1,10 +1,11 @@
 'use client'
+import type { ComponentProps } from 'react'
 import { interactiveStyles, overlayStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
 import * as SheetPrimitive from '@radix-ui/react-dialog'
 
-function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
+function Sheet({ ...props }: ComponentProps<typeof SheetPrimitive.Root>) {
   return (
     <SheetPrimitive.Root
       data-slot="sheet"
@@ -13,7 +14,7 @@ function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
   )
 }
 
-function SheetTrigger({ ...props }: React.ComponentProps<typeof SheetPrimitive.Trigger>) {
+function SheetTrigger({ ...props }: ComponentProps<typeof SheetPrimitive.Trigger>) {
   return (
     <SheetPrimitive.Trigger
       data-slot="sheet-trigger"
@@ -22,7 +23,7 @@ function SheetTrigger({ ...props }: React.ComponentProps<typeof SheetPrimitive.T
   )
 }
 
-function SheetClose({ ...props }: React.ComponentProps<typeof SheetPrimitive.Close>) {
+function SheetClose({ ...props }: ComponentProps<typeof SheetPrimitive.Close>) {
   return (
     <SheetPrimitive.Close
       data-slot="sheet-close"
@@ -31,7 +32,7 @@ function SheetClose({ ...props }: React.ComponentProps<typeof SheetPrimitive.Clo
   )
 }
 
-function SheetPortal({ ...props }: React.ComponentProps<typeof SheetPrimitive.Portal>) {
+function SheetPortal({ ...props }: ComponentProps<typeof SheetPrimitive.Portal>) {
   return (
     <SheetPrimitive.Portal
       data-slot="sheet-portal"
@@ -43,7 +44,7 @@ function SheetPortal({ ...props }: React.ComponentProps<typeof SheetPrimitive.Po
 function SheetOverlay({
   className,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
+}: ComponentProps<typeof SheetPrimitive.Overlay>) {
   return (
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
@@ -61,7 +62,7 @@ function SheetContent({
   children,
   side = 'right',
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Content> & {
+}: ComponentProps<typeof SheetPrimitive.Content> & {
   side?: 'top' | 'right' | 'bottom' | 'left'
 }) {
   return (
@@ -72,51 +73,28 @@ function SheetContent({
         className={cn(
           staticStyles.base,
           staticStyles.variant.default,
-          `
-            data-[state=open]:animate-in data-[state=open]:duration-150
-            fixed z-50 flex-col gap-4 rounded-none border-0 p-0 transition
-            ease-out
-          `,
+          'data-[state=open]:animate-in data-[state=open]:duration-150 fixed z-50 flex-col gap-4 rounded-none border-0 p-0 transition ease-out',
           side === 'right'
-          && `
-            data-[state=closed]:slide-out-to-right
-            data-[state=open]:slide-in-from-right
-            inset-y-0 right-0 h-full w-3/4 border-l
-            sm:max-w-sm
-          `,
+          && 'data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm',
           side === 'left'
-          && `
-            data-[state=closed]:slide-out-to-left
-            data-[state=open]:slide-in-from-left
-            inset-y-0 left-0 h-full w-3/4 border-r
-            sm:max-w-sm
-          `,
+          && 'data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left inset-y-0 left-0 h-full w-3/4 border-r sm:max-w-sm',
           side === 'top'
-          && `
-            data-[state=closed]:slide-out-to-top
-            data-[state=open]:slide-in-from-top
-            inset-x-0 top-0 h-auto border-b
-          `,
+          && 'data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top inset-x-0 top-0 h-auto border-b',
           side === 'bottom'
-          && `
-            data-[state=closed]:slide-out-to-bottom
-            data-[state=open]:slide-in-from-bottom
-            inset-x-0 bottom-0 h-auto border-t
-          `,
+          && 'data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom inset-x-0 bottom-0 h-auto border-t',
           className,
         )}
         {...props}
       >
         {children}
-        <SheetPrimitive.Close className={cn(
-          interactiveStyles.base,
-          interactiveStyles.variant.ghost,
-          interactiveStyles.size.icon,
-          `
-            ring-offset-background absolute top-4 right-4 inline-flex size-6
-            items-center justify-center opacity-70
-          `,
-        )}
+        <SheetPrimitive.Close
+          autoFocus
+          className={cn(
+            interactiveStyles.base,
+            interactiveStyles.variant.ghost,
+            interactiveStyles.size.icon,
+            'ring-offset-background absolute top-4 right-4 inline-flex size-6 items-center justify-center opacity-70',
+          )}
         >
           <Icon
             icon="ph:x"
@@ -129,7 +107,7 @@ function SheetContent({
   )
 }
 
-function SheetHeader({ className, ...props }: React.ComponentProps<'div'>) {
+function SheetHeader({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="sheet-header"
@@ -139,7 +117,7 @@ function SheetHeader({ className, ...props }: React.ComponentProps<'div'>) {
   )
 }
 
-function SheetFooter({ className, ...props }: React.ComponentProps<'div'>) {
+function SheetFooter({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="sheet-footer"
@@ -152,7 +130,7 @@ function SheetFooter({ className, ...props }: React.ComponentProps<'div'>) {
 function SheetTitle({
   className,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Title>) {
+}: ComponentProps<typeof SheetPrimitive.Title>) {
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
@@ -165,7 +143,7 @@ function SheetTitle({
 function SheetDescription({
   className,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Description>) {
+}: ComponentProps<typeof SheetPrimitive.Description>) {
   return (
     <SheetPrimitive.Description
       data-slot="sheet-description"
