@@ -4,13 +4,13 @@
   "type": "registry:component",
   "title": "aspect-ratio",
   "description": "aspect ratio component.",
-  "registryDependencies": [
-    "aspect-ratio"
+  "dependencies": [
+    "@radix-ui/react-aspect-ratio"
   ],
   "files": [
     {
       "path": "src/components/ui/aspect-ratio.tsx",
-      "content": "'use client'\n\nimport * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio'\n\nfunction AspectRatio({ ...props }: React.ComponentProps<typeof AspectRatioPrimitive.Root>) {\n  return (\n    <AspectRatioPrimitive.Root\n      data-slot=\"aspect-ratio\"\n      {...props}\n    />\n  )\n}\n\nexport { AspectRatio }\n",
+      "content": "'use client'\nimport * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio'\n\nfunction AspectRatio({ ...props }: React.ComponentProps<typeof AspectRatioPrimitive.Root>) {\n  return (\n    <AspectRatioPrimitive.Root\n      data-slot=\"aspect-ratio\"\n      {...props}\n    />\n  )\n}\n\nexport { AspectRatio }\n",
       "type": "registry:component"
     }
   ]
