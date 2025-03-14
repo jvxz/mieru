@@ -1,15 +1,13 @@
 'use client'
-
+import type { ComponentProps } from 'react'
 import { staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 
-import * as React from 'react'
-
 function TooltipProvider({
   delayDuration = 0,
   ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
+}: ComponentProps<typeof TooltipPrimitive.Provider>) {
   return (
     // eslint-disable-next-line react/no-context-provider
     <TooltipPrimitive.Provider
@@ -20,7 +18,7 @@ function TooltipProvider({
   )
 }
 
-function Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {
+function Tooltip({ ...props }: ComponentProps<typeof TooltipPrimitive.Root>) {
   return (
     <TooltipProvider>
       <TooltipPrimitive.Root
@@ -31,7 +29,7 @@ function Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root
   )
 }
 
-function TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
+function TooltipTrigger({ ...props }: ComponentProps<typeof TooltipPrimitive.Trigger>) {
   return (
     <TooltipPrimitive.Trigger
       data-slot="tooltip-trigger"
@@ -45,7 +43,7 @@ function TooltipContent({
   sideOffset = 4,
   children,
   ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Content>) {
+}: ComponentProps<typeof TooltipPrimitive.Content>) {
   return (
     <TooltipPrimitive.Portal>
       <TooltipPrimitive.Content
@@ -54,23 +52,13 @@ function TooltipContent({
         className={cn(
           staticStyles.base,
           staticStyles.variant.default,
-          `
-            animate-in z-50 p-0 px-3 py-1.5 text-sm text-balance
-            data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-2
-            data-[side=bottom]:slide-in-from-top-2
-            data-[side=left]:slide-in-from-right-2
-            data-[side=right]:slide-in-from-left-2
-            data-[side=top]:slide-in-from-bottom-2
-          `,
+          'animate-in z-50 p-0 px-3 py-1.5 text-sm text-balance data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-2 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
           className,
         )}
         {...props}
       >
         {children}
-        {/* <TooltipPrimitive.Arrow className={`
-          bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)]
-          rotate-45 rounded-[2px]
-        `}
+        {/* <TooltipPrimitive.Arrow className="bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]"
         /> */}
       </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>
