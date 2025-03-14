@@ -9,7 +9,7 @@
     "@radix-ui/react-context-menu"
   ],
   "registryDependencies": [
-    "http://localhost:3000/r/styles-abstraction.json"
+    "https://mieru.wisp.bio/r/styles-abstraction.json"
   ],
   "files": [
     {

@@ -25,7 +25,7 @@
         "@radix-ui/react-accordion"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -44,8 +44,8 @@
         "@radix-ui/react-alert-dialog"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json",
-        "http://localhost:3000/r/button.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json",
+        "https://mieru.wisp.bio/r/button.json"
       ],
       "files": [
         {
@@ -60,7 +60,7 @@
       "title": "alert",
       "description": "alert component.",
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -93,7 +93,7 @@
         "@radix-ui/react-avatar"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -111,7 +111,7 @@
         "@radix-ui/react-slot"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -146,7 +146,7 @@
         "@radix-ui/react-slot"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -161,7 +161,7 @@
       "title": "card",
       "description": "card component.",
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -180,8 +180,8 @@
         "embla-carousel-react"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json",
-        "http://localhost:3000/r/button.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json",
+        "https://mieru.wisp.bio/r/button.json"
       ],
       "files": [
         {
@@ -200,7 +200,7 @@
         "@radix-ui/react-checkbox"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -234,7 +234,7 @@
         "@radix-ui/react-command"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -253,7 +253,7 @@
         "@radix-ui/react-context-menu"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -272,7 +272,7 @@
         "@radix-ui/react-dialog"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -290,7 +290,7 @@
         "vaul"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -309,7 +309,7 @@
         "@radix-ui/react-dropdown-menu"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -329,8 +329,8 @@
         "@radix-ui/react-label"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json",
-        "http://localhost:3000/r/label.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json",
+        "https://mieru.wisp.bio/r/label.json"
       ],
       "files": [
         {
@@ -348,7 +348,7 @@
         "@radix-ui/react-hover-card"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -367,7 +367,7 @@
         "input-otp"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -382,7 +382,7 @@
       "title": "input",
       "description": "input component.",
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -416,7 +416,7 @@
         "@radix-ui/react-menubar"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -434,8 +434,8 @@
         "@iconify/react"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json",
-        "http://localhost:3000/r/button.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json",
+        "https://mieru.wisp.bio/r/button.json"
       ],
       "files": [
         {
@@ -453,7 +453,7 @@
         "@radix-ui/react-popover"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -487,7 +487,7 @@
         "@radix-ui/react-radio-group"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -537,7 +537,7 @@
         "@radix-ui/react-select"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -571,7 +571,7 @@
         "@radix-ui/react-dialog"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -601,7 +601,7 @@
         "@radix-ui/react-slider"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -634,7 +634,7 @@
         "@radix-ui/react-switch"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -664,7 +664,7 @@
         "@radix-ui/react-tabs"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -679,7 +679,7 @@
       "title": "textarea",
       "description": "textarea component.",
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -697,7 +697,7 @@
         "@radix-ui/react-toggle-group"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -715,7 +715,7 @@
         "@radix-ui/react-toggle"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {
@@ -733,7 +733,7 @@
         "@radix-ui/react-tooltip"
       ],
       "registryDependencies": [
-        "http://localhost:3000/r/styles-abstraction.json"
+        "https://mieru.wisp.bio/r/styles-abstraction.json"
       ],
       "files": [
         {

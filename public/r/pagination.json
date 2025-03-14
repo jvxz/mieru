@@ -8,8 +8,8 @@
     "@iconify/react"
   ],
   "registryDependencies": [
-    "http://localhost:3000/r/styles-abstraction.json",
-    "http://localhost:3000/r/button.json"
+    "https://mieru.wisp.bio/r/styles-abstraction.json",
+    "https://mieru.wisp.bio/r/button.json"
   ],
   "files": [
     {
