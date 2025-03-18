@@ -4,9 +4,10 @@ import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
 import { cva } from 'class-variance-authority'
+import { Spinner } from './spinner'
 
 const buttonVariants = cva(
-  `${interactiveStyles.base} inline-flex items-center justify-center`,
+  `${interactiveStyles.base} relative inline-flex items-center justify-center`,
   {
     variants: {
       variant: {
@@ -32,26 +33,43 @@ const buttonVariants = cva(
 
 function Button({
   className,
+  children,
   variant,
   size,
   asChild = false,
+  isLoading = false,
+  disabled = false,
   ...props
 }: ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    isLoading?: boolean
+    disabled?: boolean
   }) {
   const Comp = asChild ? Slot : 'button'
 
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({
-        variant,
-        size,
-        className,
-      }))}
+      disabled={disabled || isLoading}
+      className={cn(
+        buttonVariants({
+          variant,
+          size,
+          className,
+        }),
+        isLoading && 'grid text-transparent [grid-template-areas:stack]',
+        disabled && 'pointer-events-none',
+      )}
       {...props}
-    />
+    >
+      {children}
+      {isLoading && (
+        <span className="absolute inset-0 grid place-items-center">
+          <Spinner className="size-6" />
+        </span>
+      )}
+    </Comp>
   )
 }
 
