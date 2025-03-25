@@ -1,5 +1,6 @@
 'use client'
 import type { ThemeProviderProps } from 'next-themes'
+import { RootProvider as FumadocsRootProvider } from 'fumadocs-ui/provider'
 import dynamic from 'next/dynamic'
 import { Toaster } from './ui/sonner'
 
@@ -18,8 +19,10 @@ function Providers({ children, ...props }: ThemeProviderProps) {
       enableSystem
       {...props}
     >
-      {children}
-      <Toaster />
+      <FumadocsRootProvider>
+        {children}
+        <Toaster />
+      </FumadocsRootProvider>
     </NextThemesProvider>
   )
 }
