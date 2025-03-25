@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: 'mieru : jamie\'s personal ui kit',
 }
 
-export default function RootLayout() {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
@@ -29,15 +29,14 @@ export default function RootLayout() {
           />
         </head>
       )}
-      <body className="font-ibm-plex-sans">
+      <body className="font-ibm-plex-sans container mx-auto max-w-screen-xl transition-colors">
         <Providers>
           {process.env.NODE_ENV === 'development' && (
             <ThemeToggle
               className="absolute top-4 left-4"
             />
           )}
-          {/* {children} */}
-          <div className="grid h-screen place-items-center">soon</div>
+          {children}
         </Providers>
       </body>
     </html>
