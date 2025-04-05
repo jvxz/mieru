@@ -18,7 +18,7 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '0s',
         }}
-        d="M50 22v11"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -26,8 +26,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.1s',
         }}
-        transform="rotate(30 50 50)"
-        d="M50 22v11"
+        transform="rotate(-30 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -35,8 +35,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.2s',
         }}
-        transform="rotate(60 50 50)"
-        d="M50 22v11"
+        transform="rotate(-60 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -44,8 +44,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.3s',
         }}
-        transform="rotate(90 50 50)"
-        d="M50 22v11"
+        transform="rotate(-90 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -53,8 +53,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.4s',
         }}
-        transform="rotate(120 50 50)"
-        d="M50 22v11"
+        transform="rotate(-120 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -62,8 +62,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.5s',
         }}
-        transform="rotate(150 50 50)"
-        d="M50 22v11"
+        transform="rotate(-150 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -71,8 +71,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.6s',
         }}
-        transform="rotate(180 50 50)"
-        d="M50 22v11"
+        transform="rotate(-180 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -80,8 +80,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.7s',
         }}
-        transform="rotate(210 50 50)"
-        d="M50 22v11"
+        transform="rotate(-210 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -89,8 +89,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.8s',
         }}
-        transform="rotate(240 50 50)"
-        d="M50 22v11"
+        transform="rotate(-240 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -98,8 +98,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-.9s',
         }}
-        transform="rotate(270 50 50)"
-        d="M50 22v11"
+        transform="rotate(-270 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -107,8 +107,8 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-1s',
         }}
-        transform="rotate(300 50 50)"
-        d="M50 22v11"
+        transform="rotate(-300 50 50)"
+        d="M50 33v-11"
       />
       <path
         className="spinner-line"
@@ -116,10 +116,9 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         style={{
           animationDelay: '-1.1s',
         }}
-        transform="rotate(330 50 50)"
-        d="M50 22v11"
+        transform="rotate(-330 50 50)"
+        d="M50 33v-11"
       />
     </svg>
-
   )
 }
