@@ -54,7 +54,7 @@ function CommandInput({
     >
       <Icon
         icon="ph:magnifying-glass"
-        className="size-4 shrink-0 opacity-50"
+        className="text-muted-foreground size-4 shrink-0"
       />
       <CommandPrimitive.Input
         data-slot="command-input"

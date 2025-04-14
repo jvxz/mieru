@@ -1,6 +1,7 @@
 import { ThemeToggle } from '@/components/theme-toggle'
 import { Card } from '@/components/ui/card'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { SearchDialog } from './_components/search-dialog'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -22,14 +23,10 @@ function Header() {
           />
           <h1 className="font-medium">mieru</h1>
         </div>
-        {/* <Button
-          variant="outline"
-          className="w-1/3"
-        >
-          Search
-          <Icon icon="mingcute:search-line" />
-        </Button> */}
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <SearchDialog />
+          <ThemeToggle />
+        </div>
       </Card>
     </header>
   )

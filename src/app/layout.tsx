@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </head>
       )}
-      <body className="font-ibm-plex-sans container mx-auto max-w-screen-2xl transition-colors">
+      <body className="font-ibm-plex-sans container !mx-auto w-full !px-0 transition-colors">
         <Providers>
           {process.env.NODE_ENV === 'development' && (
             <ThemeToggle
