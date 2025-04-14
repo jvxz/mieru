@@ -16,10 +16,9 @@ function Header() {
   return (
     <header>
       <Card className="bg-card my-4 flex h-16 flex-row items-center justify-between rounded border p-0 px-6">
-        <div className="flex items-center gap-1 text-xl">
+        <div className="flex items-center gap-2 text-xl">
           <Icon
-            icon="uil:rainbow"
-            strokeWidth={0.5}
+            icon="mingcute:magic-1-line"
           />
           <h1 className="font-medium">mieru</h1>
         </div>
