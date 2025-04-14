@@ -427,6 +427,26 @@
       ]
     },
     {
+      "name": "navigation-menu",
+      "type": "registry:component",
+      "title": "navigation-menu",
+      "description": "navigation menu component.",
+      "dependencies": [
+        "@iconify/react",
+        "@radix-ui/react-navigation-menu"
+      ],
+      "registryDependencies": [
+        "https://mieru.wisp.bio/r/styles-abstraction.json",
+        "https://mieru.wisp.bio/r/button.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/navigation-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "pagination",
       "type": "registry:component",
       "title": "pagination",
