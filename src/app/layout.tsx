@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { Public_Sans } from 'next/font/google'
+import { JetBrains_Mono, Public_Sans } from 'next/font/google'
 import './globals.css'
 
-const publicSans = Public_Sans({
+const sans = Public_Sans({
   subsets: ['latin'],
-  variable: '--font-public-sans',
+  variable: '--font-sans',
   weight: ['400', '500', '600', '700'],
+})
+
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  weight: ['300', '400', '500'],
 })
 
 export const metadata: Metadata = {
@@ -19,7 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={publicSans.variable}
+      // eslint-disable-next-line readable-tailwind/no-unnecessary-whitespace
+      className={`${sans.variable} ${mono.variable}`}
     >
       {process.env.NODE_ENV === 'development' && (
         <head>
