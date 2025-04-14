@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Public_Sans } from 'next/font/google'
 import './globals.css'
 
-const ibmPlexSans = IBM_Plex_Sans({
+const publicSans = Public_Sans({
   subsets: ['latin'],
-  variable: '--font-ibm-plex-sans',
+  variable: '--font-public-sans',
   weight: ['400', '500', '600', '700'],
 })
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={ibmPlexSans.variable}
+      className={publicSans.variable}
     >
       {process.env.NODE_ENV === 'development' && (
         <head>

@@ -8,8 +8,8 @@
     var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 
-  --font-ibm-plex-sans:
-    var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  --font-public-sans:
+    var(--font-public-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
 
   --text-base: var(--text-base);
@@ -231,6 +231,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50 underline-offset-2;
+    text-box: trim-both cap alphabetic
   }
   body {
     @apply bg-background text-foreground;
