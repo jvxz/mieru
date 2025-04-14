@@ -230,7 +230,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 underline-offset-2;
+    @apply border-border outline-ring/50 underline-offset-2 min-h-0;
     text-box: trim-both cap alphabetic
   }
   body {
