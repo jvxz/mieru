@@ -7,7 +7,7 @@ import './globals.css'
 const sans = Public_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 const mono = JetBrains_Mono({

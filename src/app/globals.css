@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
-@plugin "@tailwindcss/typography";
 @import '../lib/css/tw-animate-css.css';
+
 
 @custom-variant dark (&:is(.dark *));
 @theme {
@@ -28,6 +28,8 @@
   --text-5xl: calc(var(--text-base) * 3.5);
   --text-6xl: calc(var(--text-base) * 4);
   --text-7xl: calc(var(--text-base) * 4.5);
+
+  --font-weight-normal: 300;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -70,6 +72,7 @@
   --animate-accordion-down: accordion-down 0.15s;
   --animate-accordion-up: accordion-up 0.15s;
   --animate-caret-blink: caret-blink 1s ease-out infinite;
+
 
   @keyframes accordion-down {
     from {
@@ -234,7 +237,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 underline-offset-2 min-h-0;
+    @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal;
     text-box: trim-both cap alphabetic
   }
   body {
@@ -252,4 +255,44 @@
   50% {
     opacity: 0;
   }
+}
+
+@utility prose {
+  --tw-prose-body: var(--color-primary);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-bold: var(--color-primary);
+  --tw-prose-quote-borders: var(--color-slate-300);
+  --tw-prose-quotes: var(--color-muted-foreground);
+  --tw-prose-code: var(--color-primary);
+
+  code {
+    &::before,
+    &::after {
+      display : none ;
+    }
+    text-wrap : nowrap ;
+  }
+
+    blockquote {
+    font-weight : 400;
+  }
+
+  a {
+    @apply text-primary font-medium;
+  }
+
+  h1 {
+    @apply font-medium text-xl mb-6;
+    color: var(--tw-prose-headings);
+  }
+
+  h2 {
+    @apply font-medium text-lg;
+    color: var(--tw-prose-headings);
+  }
+
+  a {
+    @apply text-primary hover:underline;
+  }
+
 }
