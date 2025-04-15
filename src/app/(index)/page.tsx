@@ -1,9 +1,13 @@
+import { Aside } from './_components/aside/aside'
+import { Content } from './_components/content/content'
+import { Nav } from './_components/nav/nav'
+
 export default function Page() {
   return (
     <div className="flex h-full w-full">
-      <div className="w-1/5 border-x">nav</div>
-      <div className="grow">content</div>
-      <div className="w-1/5 border-x">sidebar</div>
+      <Nav />
+      <Content />
+      <Aside />
     </div>
   )
 }
