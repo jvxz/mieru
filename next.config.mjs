@@ -1,17 +1,11 @@
-import createMDX from '@next/mdx'
+import { withContentlayer } from 'next-contentlayer2'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  reactStrictMode: true,
   experimental: {
     reactCompiler: true,
-    mdxRs: true,
   },
 }
 
-const withMDX = createMDX({
-  extension: /\.mdx?$/,
-
-})
-
-export default withMDX(nextConfig)
+export default withContentlayer(nextConfig)

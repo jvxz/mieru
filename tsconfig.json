@@ -10,7 +10,8 @@
       "@/*": ["./src/*"],
       "@/.source": [
         "./.source/index.ts"
-      ]
+      ],
+      "contentlayer2/generated": ["./.contentlayer/generated"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
@@ -26,6 +27,15 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.mjs", "**/*.mdx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next.config.mjs",
+    "**/*.mdx",
+    ".contentlayer/generated"
+
+  ],
   "exclude": ["node_modules"]
 }
