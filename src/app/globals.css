@@ -242,7 +242,7 @@
   * {
     @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal;
     text-box: trim-both cap alphabetic;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
   }
   body {
     @apply bg-background text-foreground;
