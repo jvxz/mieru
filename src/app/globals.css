@@ -29,7 +29,10 @@
   --text-6xl: calc(var(--text-base) * 4);
   --text-7xl: calc(var(--text-base) * 4.5);
 
-  --font-weight-normal: 300;
+  /* --font-weight-normal: 400; */
+  /* --font-weight-medium: 600; */
+  /* --font-weight-semibold: 600; */
+  /* --font-weight-bold: 700; */
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -174,12 +177,12 @@
   --background: hsl(254, 32.5%, 3.9%);
 
   /* --foreground: 0 0% 98%; */
-  --foreground: hsl(254, 50%, 91%);
+  --foreground: hsl(254, 20%, 91%);
 
   /* --card: 0 0% 3.9%; */
   --card: hsl(254, 25.5%, 5.9%);
   /* --card-foreground: 0 0% 98%; */
-  --card-foreground: hsl(254, 50%, 91%);
+  --card-foreground: hsl(254, 20%, 91%);
 
   /* --popover: 0 0% 3.9%; */
   --popover: hsl(254, 32.5%, 3.9%);
@@ -238,7 +241,8 @@
 @layer base {
   * {
     @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal;
-    text-box: trim-both cap alphabetic
+    text-box: trim-both cap alphabetic;
+    letter-spacing: 0.01em;
   }
   body {
     @apply bg-background text-foreground;
@@ -282,17 +286,21 @@
   }
 
   h1 {
-    @apply font-medium text-xl mb-6;
+    @apply font-bold text-xl;
     color: var(--tw-prose-headings);
   }
 
   h2 {
-    @apply font-medium text-lg;
+    @apply font-bold text-lg;
     color: var(--tw-prose-headings);
   }
 
   a {
     @apply text-primary hover:underline;
+  }
+
+  *{
+    @apply mb-6
   }
 
 }

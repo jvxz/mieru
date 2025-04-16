@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { JetBrains_Mono, Public_Sans } from 'next/font/google'
+import { Archivo, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const sans = Public_Sans({
+const sans = Archivo({
   subsets: ['latin'],
   variable: '--font-sans',
   weight: ['300', '400', '500', '600', '700'],
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       // eslint-disable-next-line readable-tailwind/no-unnecessary-whitespace
-      className={`${sans.variable} ${mono.variable}`}
+      className={`${sans.variable}  ${mono.variable}`}
     >
       {process.env.NODE_ENV === 'development' && (
         <head>
