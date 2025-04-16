@@ -16,7 +16,7 @@ const sans = localFont({
     {
       path: '../../public/font/Nacelle-SemiBold.otf',
       weight: '600',
-      style: 'semibold',
+      style: 'medium',
     },
     {
       path: '../../public/font/Nacelle-Bold.otf',

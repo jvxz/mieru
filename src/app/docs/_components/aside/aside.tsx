@@ -1,6 +1,6 @@
 function Aside() {
   return (
-    <div className="w-1/5 border-x">aside</div>
+    <div className="w-1/5">aside</div>
   )
 }
 
