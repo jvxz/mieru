@@ -1,10 +1,22 @@
 import { buttonVariants } from '@/components/ui/button'
-import { cn, docsTree } from '@/lib/utils'
-import { Effect } from 'effect'
+import { cn } from '@/lib/utils'
+import { allDocs } from 'contentlayer2/generated'
 import Link from 'next/link'
 
+function docsTree() {
+  const categories = new Set<string>(allDocs.map(doc => doc.category))
+
+  return Array.from(categories).map((category) => {
+    const docs = allDocs.filter(doc => doc.category === category)
+    return {
+      category,
+      docs,
+    }
+  })
+}
+
 function Nav() {
-  const tree = Effect.runSync(docsTree)
+  const tree = docsTree()
 
   return (
     <div className="flex h-full w-1/5 flex-col gap-4 p-6">
@@ -16,7 +28,7 @@ function Nav() {
           <h2 className="text-md font-bold">
             {item.category}
           </h2>
-          <ul className='flex flex-col'>
+          <ul className="flex flex-col">
             {item.docs.map(doc => (
               <Link
                 href={`/${doc.url}`}

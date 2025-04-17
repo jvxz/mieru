@@ -6,9 +6,6 @@ function Doc({ content }: { content: DocType }) {
 
   return (
     <article>
-      <header>
-        <h1>{content.title}</h1>
-      </header>
       <MDXContent />
     </article>
   )

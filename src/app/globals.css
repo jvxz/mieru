@@ -244,8 +244,17 @@
     text-box: trim-both cap alphabetic;
     letter-spacing: 0.02em;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply tracking-tight;
+  }
+
+  h2 {
+    @apply tracking-tight;
   }
 }
 
@@ -299,7 +308,11 @@
     @apply text-primary hover:underline;
   }
 
-  *{
+  .heading-anchor {
+    @apply text-muted-foreground font-mono ml-2;
+  }
+
+  * {
     @apply mb-6
   }
 
