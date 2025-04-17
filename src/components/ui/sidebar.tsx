@@ -10,9 +10,9 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/react'
 import { Slot } from '@radix-ui/react-slot'
 import { cva } from 'class-variance-authority'
-import { PanelLeftIcon } from 'lucide-react'
 import * as React from 'react'
 import { useEffect } from 'react'
 
@@ -309,7 +309,7 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <PanelLeftIcon />
+      <Icon icon="mdi:menu" />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )
