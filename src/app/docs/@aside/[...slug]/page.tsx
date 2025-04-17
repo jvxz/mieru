@@ -3,8 +3,9 @@ import { Effect, Exit } from 'effect'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
-async function Aside() {
-  const toc = await Effect.runPromiseExit(getToc(''))
+export default async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params
+  const toc = await Effect.runPromiseExit(getToc(slug[0]))
   if (Exit.isFailure(toc)) return 'failed to get toc'
 
   return (
@@ -50,5 +51,3 @@ async function Aside() {
     </div>
   )
 }
-
-export { Aside }

@@ -1,14 +1,11 @@
-import { Aside } from './_components/aside/aside'
-import { Nav } from './_components/nav/nav'
-
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children, nav, aside }: { children: React.ReactNode, nav: React.ReactNode, aside: React.ReactNode }) {
   return (
     <div className="flex h-full">
-      <Nav />
+      {nav}
       <div className="prose flex-1 p-6">
         {children}
       </div>
-      <Aside />
+      {aside}
     </div>
   )
 }
