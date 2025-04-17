@@ -304,6 +304,11 @@
     color: var(--tw-prose-headings);
   }
 
+  h3 {
+    @apply font-bold text-md;
+    color: var(--tw-prose-headings);
+  }
+
   a {
     @apply text-primary hover:underline;
   }

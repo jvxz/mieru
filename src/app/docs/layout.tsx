@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-full">
       <Nav />
-      <div className="prose grow p-6">
+      <div className="prose flex-1 p-6">
         {children}
       </div>
       <Aside />
