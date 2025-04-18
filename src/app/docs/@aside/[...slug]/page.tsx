@@ -9,7 +9,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
   if (Exit.isFailure(toc)) return 'failed to get toc'
 
   return (
-    <div className="h-full w-1/5 space-y-4 p-6">
+    <div className="hidden h-full w-1/5 space-y-4 p-6 xl:block">
       <h2 className="text-md mb-4 font-bold">Page content</h2>
       <ul className="flex flex-col">
         {toc.value.map((item) => {

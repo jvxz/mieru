@@ -7,8 +7,28 @@ import { Button } from '@/components/ui/button'
 
 # Introduction
 
----
-
 mieru is an opinionated collection of heavily edited React components from the [shadcn/ui](https://ui.shadcn.com/) library, offering much more personality and easier customization.
 
 As with shadcn/ui itself, **mieru is how you build your component library**.
+
+## Philosophy
+
+shadcn/ui has been a revolutionary library for the frontend community. It allows anyone to build beautiful, functional and accessible components with ease. However, after working with it for some time, you may have found that some of its concepts have a few drawbacks. **mieru is an attempt to address these drawbacks, while maintaining the spirit of shadcn/ui**.
+
+You can find more information about the philosophy of shadcn/ui [here](https://ui.shadcn.com/docs).
+
+## What's remained
+
+- **Open code**: You own the code. All components can be copy and pasted into your codebase
+- **Composition**: All components are designed to adhere to each other
+- **Beautiful defaults**: Designed with love out of the box, made to inspire your own designs
+- **CLI support**: All components can be installed using the shadcn/ui CLI
+
+## What's changed
+
+- **Design**: mieru's components were designed from the ground up, with a completely distinct design language
+- **Source of truth**: Every component in shadcn/ui is individually defined, which makes it hard to make changes to the overall design system. mieru uses a single source of truth for the entire design system, making it trivial to make changes to the overall design system
+- **Unrestricted icons**: shadcn/ui exclusively uses the [Lucide](https://lucide.dev/) icon library, which restricts you to a single icon set. mieru uses the [Iconify](https://iconify.design/) library, allowing you to use a majority of the most prominent open source icon sets
+- **Snappier animations**: While shadcn/ui's animations remain beautiful and fluid, mieru's animations give a more snappy and responsive feel
+
+This is just an overview of the major changes compared to shadcn/ui. For a more comprehensive list of changes, visit the [differences](/docs/differences) page.

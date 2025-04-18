@@ -240,7 +240,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal;
+    @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal leading-6.5;
     text-box: trim-both cap alphabetic;
     letter-spacing: 0.02em;
   }
@@ -295,22 +295,30 @@
   }
 
   h1 {
-    @apply font-bold text-xl;
+    @apply font-bold text-xl not-first:mt-12;
     color: var(--tw-prose-headings);
   }
 
   h2 {
-    @apply font-bold text-lg;
+    @apply font-bold text-lg not-first:mt-12;
     color: var(--tw-prose-headings);
   }
 
   h3 {
-    @apply font-bold text-md;
+    @apply font-bold text-md not-first:mt-12;
     color: var(--tw-prose-headings);
   }
 
   a {
-    @apply text-primary hover:underline;
+    @apply text-primary underline;
+  }
+
+  ul {
+    @apply list-disc ml-6;
+  }
+
+  li {
+    @apply mb-6;
   }
 
   .heading-anchor {
