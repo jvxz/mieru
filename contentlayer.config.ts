@@ -38,6 +38,10 @@ export const Doc = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    position: {
+      type: 'number',
+      required: true,
+    },
   },
   computedFields: {
     url: {

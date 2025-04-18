@@ -19,26 +19,6 @@ function Content() {
         <StarsBackground className="mask-radial-at-center" />
       </div>
       <Link href="/docs/test">page</Link>
-      {/* <article>
-        <section className="prose">
-          <h1>Introduction</h1>
-          <span>
-            mieru is an opinionated collection of heavily edited React components from the
-          </span>
-          {' '}
-          <Link
-            href="https://ui.shadcn.com/"
-          >
-            shadcn/ui
-          </Link>
-          {' '}
-          <span>
-            library, offering much more personality and easier customization.
-          </span>
-          <br />
-          <span>As with shadcn/ui itself, <span className='font-medium'>mieru is how you build your component library</span>.</span>
-        </section>
-      </article> */}
     </div>
   )
 }

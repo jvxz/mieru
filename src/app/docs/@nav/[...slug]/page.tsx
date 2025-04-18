@@ -25,7 +25,7 @@ export default function Page() {
             {item.category}
           </h2>
           <ul className="flex flex-col">
-            {item.docs.map(doc => (
+            {item.docs.sort((a, b) => a.position - b.position).map(doc => (
               <Link
                 href={`/${doc.url}`}
                 key={doc.url}
