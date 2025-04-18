@@ -1,11 +1,9 @@
-import { allDocs } from 'contentlayer2/generated'
+import { getDocFromParams } from '@/lib/utils'
 import { notFound } from 'next/navigation'
 import { Doc } from './_components/doc'
 
 async function getDocContent(params: Promise<{ slug: string[] }>) {
-  const { slug } = await params
-  const content = allDocs.find(doc => doc._raw.flattenedPath === slug[0])
-
+  const content = await getDocFromParams(params)
   if (!content) return notFound()
 
   return content

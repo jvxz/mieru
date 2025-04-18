@@ -4,8 +4,7 @@ import Link from 'next/link'
 import { Fragment } from 'react'
 
 export default async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
-  const { slug } = await params
-  const toc = await Effect.runPromiseExit(getToc(slug[0]))
+  const toc = await Effect.runPromiseExit(getToc(params))
   if (Exit.isFailure(toc)) return 'failed to get toc'
 
   return (

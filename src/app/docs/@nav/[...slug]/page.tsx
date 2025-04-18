@@ -22,7 +22,7 @@ export default function Page() {
           className="space-y-4"
         >
           <h2 className="text-md font-bold">
-            {item.category}
+            {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
           </h2>
           <ul className="flex flex-col">
             {item.docs.sort((a, b) => a.position - b.position).map(doc => (

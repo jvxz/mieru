@@ -34,10 +34,6 @@ export const Doc = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    category: {
-      type: 'string',
-      required: true,
-    },
     position: {
       type: 'number',
       required: true,
@@ -47,6 +43,13 @@ export const Doc = defineDocumentType(() => ({
     url: {
       type: 'string',
       resolve: doc => `docs/${doc._raw.flattenedPath}`,
+    },
+    category: {
+      type: 'string',
+      resolve: (doc) => {
+        const dirPath = path.dirname(doc._raw.sourceFilePath)
+        return dirPath.split('/')[0]
+      },
     },
   },
 }))
@@ -68,7 +71,6 @@ export default makeSource({
       content = content.replace(/ with \{.*?\}/g, '')
 
       fs.writeFileSync(GENERATED_FILE_PATH, content, 'utf-8')
-      console.log('Patched .contentlayer/generated/index.mjs after Contentlayer generation.')
     }
   },
 })
