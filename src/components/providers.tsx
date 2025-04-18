@@ -1,6 +1,7 @@
 'use client'
 import type { ThemeProviderProps } from 'next-themes'
 import dynamic from 'next/dynamic'
+import { TailwindIndicator } from './tailwind-indicator'
 import { Toaster } from './ui/sonner'
 
 const NextThemesProvider = dynamic(
@@ -16,10 +17,12 @@ function Providers({ children, ...props }: ThemeProviderProps) {
       attribute="class"
       defaultTheme="system"
       enableSystem
+      disableTransitionOnChange
       {...props}
     >
       {children}
       <Toaster />
+      <TailwindIndicator />
     </NextThemesProvider>
   )
 }

@@ -1,5 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import nextPlugin from '@next/eslint-plugin-next'
+import reactCompiler from 'eslint-plugin-react-compiler'
 import readableTailwind from 'eslint-plugin-readable-tailwind'
 
 export default antfu({
@@ -23,6 +24,7 @@ export default antfu({
   plugins: {
     'readable-tailwind': readableTailwind,
     '@next/next': nextPlugin,
+    'react-compiler': reactCompiler,
   },
 
   rules: {
@@ -102,5 +104,6 @@ export default antfu({
     'ts/strict-boolean-expressions': 'off',
     'node/prefer-global/process': 'off',
     'react-refresh/only-export-components': 'off',
+    'react-compiler/react-compiler': 'error',
   },
 })
