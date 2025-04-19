@@ -78,6 +78,25 @@
   --animate-accordion-up: accordion-up 0.15s;
   --animate-caret-blink: caret-blink 1s ease-out infinite;
 
+  /* tw typography overrides */
+
+  /* --tailwind-body: var(--foreground);
+  --typography-headings: var(--foreground);
+  --tailwind-lead: var(--foreground);
+  --tailwind-links: var(--primary);
+  --tailwind-bold: var(--foreground);
+  --tailwind-counters: var(--foreground);
+  --tailwind-bullets: var(--foreground);
+  --tailwind-hr: var(--color-border);
+  --tailwind-quotes: var(--foreground);
+  --tailwind-quote-borders: var(--color-border);
+  --tailwind-captions: var(--foreground);
+  --tailwind-code: var(--foreground);
+  --tailwind-pre-code: var(--color-secondary-foreground);
+  --tailwind-pre-bg: var(--color-secondary);
+  --tailwind-th-borders: var(--color-border);
+  --tailwind-td-borders: var(--color-border); */
+
 
   @keyframes accordion-down {
     from {
@@ -269,8 +288,8 @@
   }
 }
 
-@utility prose {
-  --tw-prose-body: var(--color-primary);
+/* @utility prose {
+  --tailwind-body: var(--color-primary);
   --tw-prose-headings: var(--color-foreground);
   --tw-prose-bold: var(--color-primary);
   --tw-prose-quote-borders: var(--color-slate-300);
@@ -339,4 +358,4 @@
   }
 
 
-}
+} */
