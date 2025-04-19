@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 
 function Checkbox({
@@ -19,9 +18,8 @@ function Checkbox({
         data-slot="checkbox-indicator"
         className="flex items-center justify-center text-current transition-none"
       >
-        <Icon
-          icon="ph:check-bold"
-          className="size-3"
+        <svg
+          className="iconify icon-[ph--check-bold] size-3"
         />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>

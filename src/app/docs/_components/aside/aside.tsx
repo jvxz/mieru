@@ -1,10 +1,11 @@
 import { getToc } from '@/lib/toc'
+import { allDocs } from 'contentlayer2/generated'
 import { Effect, Exit } from 'effect'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
-async function Aside() {
-  const toc = await Effect.runPromiseExit(getToc(''))
+async function Aside({ params }: { params: Promise<{ slug: string[] }> }) {
+  const toc = await Effect.runPromiseExit(getToc(allDocs, params))
   if (Exit.isFailure(toc)) return 'failed to get toc'
 
   return (

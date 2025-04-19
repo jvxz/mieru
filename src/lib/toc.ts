@@ -1,3 +1,4 @@
+import type { Doc } from 'contentlayer2/generated'
 import type { TocItem } from 'remark-flexible-toc'
 import { Effect } from 'effect'
 import { remark } from 'remark'
@@ -5,11 +6,11 @@ import remarkFlexibleToc from 'remark-flexible-toc'
 import remarkMdx from 'remark-mdx'
 import { getDocFromParams } from './utils'
 
-export function getToc(slug: Promise<{ slug: string[] }>) {
+export function getToc(allDocs: Doc[], slug: Promise<{ slug: string[] }>) {
   return Effect.gen(function* (_) {
     const doc = yield* _(
       Effect.tryPromise({
-        try: async () => getDocFromParams(slug),
+        try: async () => getDocFromParams(allDocs, slug),
         catch: () => new Error('Failed to get doc'),
       }),
       Effect.filterOrFail(doc => doc !== undefined),

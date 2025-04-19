@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
 @import '../lib/css/tw-animate-css.css';
-
+@plugin "@iconify/tailwind4" {
+  prefixes: ph;
+}
 
 @custom-variant dark (&:is(.dark *));
 @theme {
@@ -249,13 +251,10 @@
     @apply bg-background text-foreground;
   }
 
-  h1 {
+  h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
   }
 
-  h2 {
-    @apply tracking-tight;
-  }
 }
 
 @keyframes caret-blink {
@@ -286,7 +285,7 @@
     text-wrap : nowrap ;
   }
 
-    blockquote {
+  blockquote {
     font-weight : 400;
   }
 
@@ -294,19 +293,33 @@
     @apply text-primary font-medium;
   }
 
-  h1 {
-    @apply font-bold text-xl not-first:mt-12;
+  code {
+    @apply bg-muted text-sm p-1 py-0.5 rounded font-mono;
+  }
+
+  hr {
+    @apply mb-8;
+  }
+
+  p {
+    @apply mb-8;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold not-first:mt-12 mb-8;
     color: var(--tw-prose-headings);
+  }
+
+  h1 {
+    @apply text-2xl;
   }
 
   h2 {
-    @apply font-bold text-lg not-first:mt-12;
-    color: var(--tw-prose-headings);
+    @apply text-lg;
   }
 
   h3 {
-    @apply font-bold text-md not-first:mt-12;
-    color: var(--tw-prose-headings);
+    @apply text-md;
   }
 
   a {
@@ -325,8 +338,5 @@
     @apply text-muted-foreground font-mono ml-2;
   }
 
-  * {
-    @apply mb-8
-  }
 
 }

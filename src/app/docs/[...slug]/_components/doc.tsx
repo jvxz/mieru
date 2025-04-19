@@ -12,3 +12,4 @@ function Doc({ content }: { content: DocType }) {
 }
 
 export { Doc }
+

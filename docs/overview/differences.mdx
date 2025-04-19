@@ -1,0 +1,41 @@
+---
+title: Differences
+position: 3
+---
+import { StaticExamples, InteractiveExamples } from "@/app/docs/_components/docs-components/differences";
+
+# Differences
+
+---
+
+mieru comes with a slew of features and changes from shadcn/ui. 
+
+## Design
+
+The most distinguishable feature of mieru is its unique design. The design of mieru's components experiences a complete departure from shadcn/ui's design, focusing on a more playful and feedback-driven approach.
+
+## Source of truth
+
+One of the most notable benefits of shadcn/ui is ease of use for styling its components. All components are individually styled, allowing them to be fully customized. However, one drawback of this is that it can be a chore to edit the overall design system. You would need to edit each component's styles and keep track of which components use which styles.
+
+mieru components reference a single `styles.ts` file, which contains the fundamental styles for different component categories. This allows for a single source of truth for the design system, making it trivial to maintain and update.
+
+The majority of mieru components can be classified as either "static" or "interactive". 
+
+- **Static**: Elements whose style do not change when interacting with them. Examples being cards, alerts, and badges
+
+<StaticExamples/>
+
+- **Interactive**: Elements whose style change when interacting with them. Examples being buttons, checkboxes, and switches
+
+<InteractiveExamples/>
+
+## Unrestricted icons
+
+## Snappier animations
+
+### Duration
+
+### Outro animations
+
+## Components
