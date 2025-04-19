@@ -1,4 +1,8 @@
-import { withContentlayer } from 'next-contentlayer2'
+import { createMDX } from 'fumadocs-mdx/next'
+
+const withMDX = createMDX({
+  configPath: './source.config.ts',
+})
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,4 +12,4 @@ const nextConfig = {
   },
 }
 
-export default withContentlayer(nextConfig)
+export default withMDX(nextConfig)

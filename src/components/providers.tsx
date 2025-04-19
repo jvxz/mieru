@@ -1,5 +1,6 @@
 'use client'
 import type { ThemeProviderProps } from 'next-themes'
+import { RootProvider } from 'fumadocs-ui/provider'
 import dynamic from 'next/dynamic'
 import { TailwindIndicator } from './tailwind-indicator'
 import { Toaster } from './ui/sonner'
@@ -20,7 +21,7 @@ function Providers({ children, ...props }: ThemeProviderProps) {
       disableTransitionOnChange
       {...props}
     >
-      {children}
+      <RootProvider>{children}</RootProvider>
       <Toaster />
       <TailwindIndicator />
     </NextThemesProvider>
