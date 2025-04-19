@@ -2,7 +2,7 @@ export default function Layout({ children, nav, aside }: { children: React.React
   return (
     <div className="flex h-full">
       {nav}
-      <div className="prose flex-1 p-6">
+      <div className="flex-1 p-6">
         {children}
       </div>
       {aside}
