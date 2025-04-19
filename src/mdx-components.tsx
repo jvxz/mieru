@@ -1,5 +1,6 @@
 import type { MDXComponents } from 'mdx/types'
 import defaultMdxComponents from 'fumadocs-ui/mdx'
+import Link from 'next/link'
 import { cn } from './lib/utils'
 
 const MARGIN = 'mb-0'
@@ -38,11 +39,17 @@ export function getMDXComponents(): MDXComponents {
     ),
     ul: ({ ...props }) => (
       <ul
-        className={cn('flex flex-col gap-5')}
+        className={cn('flex list-disc flex-col gap-5 pl-5')}
         {...props}
       />
     ),
-
+    a: ({ ...props }) => (
+      <Link
+        target="_blank"
+        className={cn('text-primary w-fit font-bold underline')}
+        {...props}
+      />
+    ),
   }
 }
 

@@ -26,7 +26,7 @@ export default function Page() {
                     buttonVariants({
                       variant: 'ghost',
                     }),
-                    '-mx-3 justify-start',
+                    'text-card-foreground/75 -mx-3 justify-start hover:text-card-foreground',
                   )}
                 >
                   {node.name?.toString()}

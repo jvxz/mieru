@@ -2,7 +2,7 @@
   "type": "folder",
   "title": "Overview",
   "pages": [
-    "differences",
-    "introduction"
+    "introduction",
+    "differences"
   ]
 }
