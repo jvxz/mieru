@@ -11,7 +11,7 @@ function Checkbox({
   return (
     <CheckboxPrimitive.Root
       data-slot="checkbox"
-      className={cn(interactiveStyles.base, interactiveStyles.variant.default, 'active:data-[state=checked]:bg-primary/90 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary size-4 cursor-default rounded-sm transition-shadow', className)}
+      className={cn(interactiveStyles.base, interactiveStyles.variant.default, 'active:data-[state=checked]:bg-primary/90 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary size-4 cursor-default transition-shadow', className)}
       {...props}
     >
       <CheckboxPrimitive.Indicator

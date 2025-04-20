@@ -3,6 +3,7 @@
   "title": "Overview",
   "pages": [
     "introduction",
-    "differences"
+    "differences",
+    "migration"
   ]
 }

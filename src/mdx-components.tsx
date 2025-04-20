@@ -3,8 +3,6 @@ import defaultMdxComponents from 'fumadocs-ui/mdx'
 import Link from 'next/link'
 import { cn } from './lib/utils'
 
-const MARGIN = 'mb-0'
-
 export function getMDXComponents(): MDXComponents {
   return {
     ...defaultMdxComponents,
@@ -19,12 +17,6 @@ export function getMDXComponents(): MDXComponents {
         {...props}
       />
     ),
-    p: ({ ...props }) => (
-      <p
-        className={cn(MARGIN)}
-        {...props}
-      />
-    ),
     h1: ({ ...props }) => (
       <h1
         className={cn('text-2xl font-bold')}
@@ -33,7 +25,13 @@ export function getMDXComponents(): MDXComponents {
     ),
     h2: ({ ...props }) => (
       <h2
-        className={cn('mt-6 text-lg font-bold')}
+        className={cn('mt-4 text-lg font-bold')}
+        {...props}
+      />
+    ),
+    h3: ({ ...props }) => (
+      <h3
+        className={cn('text-md mt-4 font-bold')}
         {...props}
       />
     ),
