@@ -1,11 +1,21 @@
-export default function Layout({ children, nav, aside }: { children: React.ReactNode, nav: React.ReactNode, aside: React.ReactNode }) {
+export default function Layout({
+  children,
+  nav,
+  aside,
+}: {
+  children: React.ReactNode
+  nav: React.ReactNode
+  aside: React.ReactNode
+}) {
   return (
-    <div className="flex h-full">
-      {nav}
-      <div className="flex-1 p-6">
-        {children}
+    <main className="flex h-auto flex-1">
+      <div className="grid grid-cols-[1fr_4fr] gap-6">
+        {nav}
+        <div className="flex flex-1 gap-6">
+          {children}
+          {aside}
+        </div>
       </div>
-      {aside}
-    </div>
+    </main>
   )
 }

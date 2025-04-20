@@ -1,7 +1,7 @@
 ---
 title: Differences
 ---
-import { StaticExamples, InteractiveExamples } from "@/app/docs/_components/docs-components/differences";
+import { PopoverExamples, StaticExamples, InteractiveExamples } from "@/app/docs/_components/docs-components/differences";
 
 # Differences
 
@@ -15,11 +15,11 @@ The most distinguishable feature of mieru is its unique design. The design of mi
 
 ## Source of truth
 
-One of the most notable benefits of shadcn/ui is ease of use for styling its components. All components are individually styled, allowing them to be fully customized. However, one drawback of this is that it can be a chore to edit the overall design system. You would need to edit each component's styles and keep track of which components use which styles.
+One of the most notable benefits of shadcn/ui is ease of use for styling its components. All components are able to be fully customized using Tailwind CSS. However, one drawback of this is that it can be a chore to edit the overall design system. You would need to edit each component's styles and keep track of which components use which styles.
 
 mieru components reference a single `styles.ts` file, which contains the fundamental styles for different component categories. This allows for a single source of truth for the design system, making it trivial to maintain and update.
 
-The majority of mieru components can be classified as either "static" or "interactive". 
+The majority of mieru components can be classified as either "static" or "interactive". Two other, more specific categories include "popover" and "overlay".
 
 {/* - **Static**: Elements whose style do not change when interacting with them. Examples being cards, alerts, and badges */}
 
@@ -34,6 +34,12 @@ Elements whose style do not change when interacting with them. Examples being ca
 Elements whose style change when interacting with them. Examples being buttons, checkboxes, and switches
 
 <InteractiveExamples/>
+
+### Popover
+
+Elements that are used in any component that contains a popover, or popover-esque component. Examples being dropdowns, hover cards, and navigation menus.
+
+<PopoverExamples/>
 
 ## Unrestricted icons
 

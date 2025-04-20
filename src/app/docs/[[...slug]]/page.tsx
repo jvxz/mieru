@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
   if (Exit.isFailure(MDX)) return notFound()
 
   return (
-    <div>
+    <div className="pt-12">
       <MDX.value.data.body components={getMDXComponents()} />
     </div>
   )

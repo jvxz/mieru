@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
   const toc = MDX.value.data.toc
 
   return (
-    <div className="hidden h-full w-1/5 space-y-6 p-6 xl:block">
+    <div className="sticky top-24 hidden h-[calc(100vh-var(--header-height))] w-1/2 space-y-6 pt-6 xl:block">
       <h2 className="text-md font-bold">Page content</h2>
       <div className="flex flex-col gap-5">
         {toc.map((item) => {

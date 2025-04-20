@@ -69,7 +69,7 @@ function MenubarTrigger({
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.ghost,
-        'flex cursor-default items-center px-2 py-1 text-sm transition-all',
+        'flex cursor-default items-center px-2 text-sm transition-all',
         className,
       )}
       {...props}

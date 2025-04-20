@@ -1,14 +1,22 @@
 import { ThemeToggle } from '@/components/theme-toggle'
-import { Card } from '@/components/ui/card'
+import { staticStyles } from '@/lib/styles'
+import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
-import { SearchDialog } from './search-dialog'
+import { SearchDialog } from '../../app/(index)/_components/search-dialog'
 
 function Header() {
   return (
-    <Card
+    <header
       data-slot="header"
-      className="bg-card flex h-16 flex-row items-center justify-between rounded border p-0 px-6"
+      className={
+        cn(
+          staticStyles.base,
+          staticStyles.variant.default,
+          'bg-card sticky top-4 z-10 flex h-[var(--header-height)] flex-row items-center justify-between rounded border p-0 px-6',
+
+        )
+      }
     >
       <Link
         href="/"
@@ -24,7 +32,7 @@ function Header() {
         <SearchDialog />
         <ThemeToggle />
       </div>
-    </Card>
+    </header>
   )
 }
 export { Header }

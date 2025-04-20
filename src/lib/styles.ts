@@ -1,5 +1,5 @@
 const interactiveStyles = {
-  base: 'focus-visible:border-primary/50 focus-visible:ring-ring/40 focus-visible:ring-[3px] active:ring-ring/20 aria-invalid:ring-destructive/20 aria-invalid:border-destructive dark:aria-invalid:ring-destructive/40 shrink-0 cursor-pointer gap-2 rounded text-base whitespace-nowrap transition-all outline-none disabled:pointer-events-none hover:disabled:cursor-not-allowed disabled:opacity-50 underline-offset-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\'size-\'])]:size-4 duration-100',
+  base: 'focus-visible:border-primary/50 select-none focus-visible:ring-ring/40 focus-visible:ring-[3px] active:ring-ring/20 aria-invalid:ring-destructive/20 aria-invalid:border-destructive dark:aria-invalid:ring-destructive/40 shrink-0 cursor-pointer gap-2 rounded text-base whitespace-nowrap transition-all outline-none disabled:pointer-events-none hover:disabled:cursor-not-allowed disabled:opacity-50 underline-offset-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\'size-\'])]:size-4 duration-100',
   variant: {
     default: 'bg-card border-border text-card-foreground border hover:border-primary/30 active:border-primary/40',
     destructive: 'bg-destructive/90 text-destructive-foreground hover:bg-destructive active:bg-destructive/90',

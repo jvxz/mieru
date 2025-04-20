@@ -7,7 +7,7 @@ export default function Page() {
   const tree = source.getPageTree()
 
   return (
-    <div className="flex h-full w-1/5 flex-col gap-4 p-6">
+    <div className="scrollbar-track-background scrollbar-thumb-muted scrollbar-thin sticky top-24 flex h-[calc(100vh-var(--header-height))] flex-col gap-4 overflow-auto overflow-x-hidden px-4 pt-6">
       {tree.children.map(item => (
         <div
           key={item.name?.toString()}
@@ -17,7 +17,7 @@ export default function Page() {
             {item.name?.toString()}
           </h2>
           {item.type === 'folder' && (
-            <ul className="flex flex-col">
+            <ul className="flex flex-col gap-1">
               {item.children.map(node => (
                 <Link
                   href={node.type === 'page' ? node.url : '#'}
@@ -25,6 +25,7 @@ export default function Page() {
                   className={cn(
                     buttonVariants({
                       variant: 'ghost',
+                      size: 'sm',
                     }),
                     'text-card-foreground/75 -mx-3 justify-start hover:text-card-foreground',
                   )}
