@@ -7,7 +7,7 @@ export function getMDXComponents(): MDXComponents {
   return {
     ...defaultMdxComponents,
     wrapper: ({ children }) => (
-      <article className="flex flex-col gap-8">
+      <article className="flex w-full flex-col gap-6">
         {children}
       </article>
     ),
@@ -18,20 +18,26 @@ export function getMDXComponents(): MDXComponents {
       />
     ),
     h1: ({ ...props }) => (
-      <h1
-        className={cn('text-2xl font-bold')}
-        {...props}
-      />
+      <div className="flex flex-col gap-6">
+        <h1
+          className={cn('text-2xl font-bold')}
+          {...props}
+        />
+        <hr />
+      </div>
     ),
     h2: ({ ...props }) => (
-      <h2
-        className={cn('mt-4 text-lg font-bold')}
-        {...props}
-      />
+      <div className="flex flex-col gap-6">
+        <h2
+          className={cn('mt-2 text-lg font-bold')}
+          {...props}
+        />
+        <hr />
+      </div>
     ),
     h3: ({ ...props }) => (
       <h3
-        className={cn('text-md mt-4 font-bold')}
+        className={cn('text-md mt-2 font-bold')}
         {...props}
       />
     ),

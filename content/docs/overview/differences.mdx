@@ -1,11 +1,10 @@
 ---
 title: Differences
+description: A list of differences between mieru and shadcn/ui
 ---
-import { PopoverExamples, StaticExamples, InteractiveExamples } from "@/app/docs/_components/docs-components/differences";
+import { PopoverExamples, StaticExamples, InteractiveExamples, OverlayExamples } from "@/app/docs/_components/docs-components/differences";
 
 # Differences
-
----
 
 mieru comes with a slew of features and changes from shadcn/ui. 
 
@@ -25,21 +24,27 @@ The majority of mieru components can be classified as either "static" or "intera
 
 ### Static
 
-Elements whose style do not change when interacting with them. Examples being cards, alerts, and badges
+Components whose style do not change when interacting with them. Examples being cards, alerts, and badges
 
 <StaticExamples/>
 
 ### Interactive
 
-Elements whose style change when interacting with them. Examples being buttons, checkboxes, and switches
+Components whose style change when interacting with them. Examples being buttons, checkboxes, and switches
 
 <InteractiveExamples/>
 
 ### Popover
 
-Elements that are used in any component that contains a popover, or popover-esque component. Examples being dropdowns, hover cards, and navigation menus.
+Styles for any component that contains a popover (or similar). Examples being dropdowns, hover cards, and navigation menus.
 
 <PopoverExamples/>
+
+### Overlay
+
+Styles for any component that contains an overlay. Currently only dialogs and alert dialogs.
+
+<OverlayExamples/>
 
 ## Unrestricted icons
 

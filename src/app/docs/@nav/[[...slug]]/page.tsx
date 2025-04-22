@@ -7,7 +7,7 @@ export default function Page() {
   const tree = source.getPageTree()
 
   return (
-    <div className="scrollbar-track-background scrollbar-thumb-muted scrollbar-thin sticky top-24 flex h-[calc(100vh-var(--header-height))] flex-col gap-4 overflow-auto overflow-x-hidden px-4 pt-6">
+    <div className="scrollbar-track-background scrollbar-thumb-muted scrollbar-thin sticky top-16 -mt-6 flex h-full flex-col gap-4 overflow-auto overflow-x-hidden px-4 pt-12">
       {tree.children.map(item => (
         <div
           key={item.name?.toString()}

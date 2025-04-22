@@ -2,6 +2,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 import { Label } from '@/components/ui/label'
@@ -64,7 +65,7 @@ function PopoverExamples() {
               <AvatarImage src="https://github.com/vercel.png" />
               <AvatarFallback>VC</AvatarFallback>
             </Avatar>
-            <div className="space-y-1">
+            <div className="space-y-4">
               <h4 className="text-sm font-semibold">@nextjs</h4>
               <p className="text-sm">
                 The React Framework – created and maintained by @vercel.
@@ -74,7 +75,6 @@ function PopoverExamples() {
                   className="iconify mr-2 h-4 w-4 opacity-70"
                   data-icon="ph:calendar-blank"
                 />
-                {' '}
                 <span className="text-muted-foreground text-xs">
                   Joined December 2021
                 </span>
@@ -88,8 +88,30 @@ function PopoverExamples() {
   )
 }
 
+function OverlayExamples() {
+  return (
+    <div className="flex justify-center">
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button>Dialog</Button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Are you absolutely sure?</DialogTitle>
+            <DialogDescription>
+              This action cannot be undone. This will permanently delete your account
+              and remove your data from our servers.
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+    </div>
+  )
+}
+
 export {
   InteractiveExamples,
+  OverlayExamples,
   PopoverExamples,
   StaticExamples,
 }

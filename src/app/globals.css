@@ -259,9 +259,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal leading-6.5;
-    text-box: trim-both cap alphabetic;
-    letter-spacing: 0.02em;
+    @apply border-border outline-ring/50 underline-offset-2 min-h-0 font-normal;
+    /* text-box: trim-both cap alphabetic; */
+    /* letter-spacing: 0.02em; */
   }
 
   body {
@@ -285,75 +285,3 @@
     opacity: 0;
   }
 }
-
-/* @utility prose {
-  --tailwind-body: var(--color-primary);
-  --tw-prose-headings: var(--color-foreground);
-  --tw-prose-bold: var(--color-primary);
-  --tw-prose-quote-borders: var(--color-slate-300);
-  --tw-prose-quotes: var(--color-muted-foreground);
-  --tw-prose-code: var(--color-primary);
-
-  code {
-    &::before,
-    &::after {
-      display : none ;
-    }
-    text-wrap : nowrap ;
-  }
-
-  blockquote {
-    font-weight : 400;
-  }
-
-  a {
-    @apply text-primary font-medium;
-  }
-
-  code {
-    @apply bg-muted text-sm p-1 py-0.5 rounded font-mono;
-  }
-
-  hr {
-    @apply mb-8;
-  }
-
-  p {
-    @apply mb-8;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold not-first:mt-12 mb-8;
-    color: var(--tw-prose-headings);
-  }
-
-  h1 {
-    @apply text-2xl;
-  }
-
-  h2 {
-    @apply text-lg;
-  }
-
-  h3 {
-    @apply text-md;
-  }
-
-  a {
-    @apply text-primary underline;
-  }
-
-  ul {
-    @apply list-disc ml-6;
-  }
-
-  li {
-    @apply mb-6;
-  }
-
-  .heading-anchor {
-    @apply text-muted-foreground font-mono ml-2;
-  }
-
-
-} */

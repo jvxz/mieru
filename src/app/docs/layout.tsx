@@ -8,7 +8,7 @@ export default function Layout({
   aside: React.ReactNode
 }) {
   return (
-    <main className="flex h-auto flex-1">
+    <main className="flex h-full flex-1">
       <div className="grid grid-cols-[1fr_4fr] gap-6">
         {nav}
         <div className="flex flex-1 gap-6">

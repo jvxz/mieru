@@ -5,12 +5,13 @@ import Link from 'next/link'
 export default async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
   const MDX = await Effect.runPromiseExit(getPageFromParams(params))
   if (Exit.isFailure(MDX)) return null
+
   const toc = MDX.value.data.toc
 
   return (
-    <div className="sticky top-24 hidden h-[calc(100vh-var(--header-height))] w-1/2 space-y-6 pt-6 xl:block">
+    <div className="sticky top-16 -mt-6 hidden h-full w-1/2 space-y-4 pt-12 xl:block">
       <h2 className="text-md font-bold">Page content</h2>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-2">
         {toc.map((item) => {
           if (item.depth === 1) return null
           if (item.depth === 2) {
