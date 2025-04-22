@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { popoverStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu'
 
 function ContextMenu({ ...props }: ComponentProps<typeof ContextMenuPrimitive.Root>) {
@@ -75,9 +74,8 @@ function ContextMenuSubTrigger({
       {...props}
     >
       {children}
-      <Icon
-        icon="ph:chevron-right"
-        className="ml-auto"
+      <svg
+        className="iconify ph--caret-right ml-auto"
       />
     </ContextMenuPrimitive.SubTrigger>
   )
@@ -148,9 +146,8 @@ function ContextMenuCheckboxItem({
     >
       <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <ContextMenuPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:check"
-            className="size-4"
+          <svg
+            className="iconify ph--check size-4"
           />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
@@ -176,9 +173,8 @@ function ContextMenuRadioItem({
       `}
       >
         <ContextMenuPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:circle"
-            className="size-2 fill-current"
+          <svg
+            className="iconify ph--circle size-2 fill-current"
           />
         </ContextMenuPrimitive.ItemIndicator>
       </span>

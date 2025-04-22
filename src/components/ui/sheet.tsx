@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles, overlayStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as SheetPrimitive from '@radix-ui/react-dialog'
 
 function Sheet({ ...props }: ComponentProps<typeof SheetPrimitive.Root>) {
@@ -96,9 +95,8 @@ function SheetContent({
             'ring-offset-background absolute top-4 right-4 inline-flex size-6 items-center justify-center opacity-70',
           )}
         >
-          <Icon
-            icon="ph:x"
-            className="size-4"
+          <svg
+            className="iconify ph--x size-4"
           />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>

@@ -2,6 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "mieru",
   "homepage": "https://mieru.twirl.sh",
+  "dependencies": [
+    "@tabler/icons-react"
+  ],
   "items": [
     {
       "name": "styles-abstraction",
@@ -21,7 +24,6 @@
       "title": "accordion",
       "description": "accordion component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-accordion"
       ],
       "registryDependencies": [
@@ -40,7 +42,6 @@
       "title": "alert-dialog",
       "description": "alert dialog component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-alert-dialog"
       ],
       "registryDependencies": [
@@ -126,7 +127,6 @@
       "title": "breadcrumb",
       "description": "breadcrumb component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-slot"
       ],
       "files": [
@@ -142,7 +142,6 @@
       "title": "button",
       "description": "button component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-slot"
       ],
       "registryDependencies": [
@@ -177,7 +176,6 @@
       "title": "carousel",
       "description": "carousel component.",
       "dependencies": [
-        "@iconify/react",
         "embla-carousel-react"
       ],
       "registryDependencies": [
@@ -197,7 +195,6 @@
       "title": "checkbox",
       "description": "checkbox component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-checkbox"
       ],
       "registryDependencies": [
@@ -231,7 +228,6 @@
       "title": "command",
       "description": "command component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-command"
       ],
       "registryDependencies": [
@@ -250,7 +246,6 @@
       "title": "context-menu",
       "description": "context menu component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-context-menu"
       ],
       "registryDependencies": [
@@ -269,7 +264,6 @@
       "title": "dialog",
       "description": "dialog component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-dialog"
       ],
       "registryDependencies": [
@@ -306,7 +300,6 @@
       "title": "dropdown-menu",
       "description": "dropdown menu component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-dropdown-menu"
       ],
       "registryDependencies": [
@@ -325,7 +318,6 @@
       "title": "form",
       "description": "form component.",
       "dependencies": [
-        "@iconify/react",
         "react-hook-form",
         "@radix-ui/react-label"
       ],
@@ -364,7 +356,6 @@
       "title": "input-otp",
       "description": "input OTP component.",
       "dependencies": [
-        "@iconify/react",
         "input-otp"
       ],
       "registryDependencies": [
@@ -413,7 +404,6 @@
       "title": "menubar",
       "description": "menubar component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-menubar"
       ],
       "registryDependencies": [
@@ -432,7 +422,6 @@
       "title": "navigation-menu",
       "description": "navigation menu component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-navigation-menu"
       ],
       "registryDependencies": [
@@ -451,9 +440,7 @@
       "type": "registry:component",
       "title": "pagination",
       "description": "pagination component.",
-      "dependencies": [
-        "@iconify/react"
-      ],
+      "dependencies": [],
       "registryDependencies": [
         "https://mieru.wisp.bio/r/styles-abstraction.json",
         "https://mieru.wisp.bio/r/button.json"
@@ -504,7 +491,6 @@
       "title": "radio-group",
       "description": "radio group component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-radio-group"
       ],
       "registryDependencies": [
@@ -523,7 +509,6 @@
       "title": "resizable",
       "description": "resizable component.",
       "dependencies": [
-        "@iconify/react",
         "react-resizable-panels"
       ],
       "files": [
@@ -554,7 +539,6 @@
       "title": "select",
       "description": "select component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-select"
       ],
       "registryDependencies": [
@@ -588,7 +572,6 @@
       "title": "sheet",
       "description": "sheet component.",
       "dependencies": [
-        "@iconify/react",
         "@radix-ui/react-dialog"
       ],
       "registryDependencies": [

@@ -1,7 +1,6 @@
 import type { ComponentProps } from 'react'
 import { popoverStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 import { cva } from 'class-variance-authority'
 import { buttonVariants } from './button'
@@ -81,9 +80,8 @@ function NavigationMenuTrigger({
       {...props}
     >
       {children}
-      <Icon
-        icon="ph:caret-down"
-        className="relative top-px ml-1 size-3"
+      <svg
+        className="iconify ph--caret-down relative top-px ml-1 size-3"
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>

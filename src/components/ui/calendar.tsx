@@ -2,7 +2,6 @@
 'use client'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react/dist/iconify.js'
 import * as React from 'react'
 import { DayPicker } from 'react-day-picker'
 
@@ -80,16 +79,14 @@ function Calendar({
       }}
       components={{
         IconLeft: ({ className, ...props }) => (
-          <Icon
-            icon="ph:caret-left"
-            className={cn('size-4', className)}
+          <svg
+            className={cn('iconify ph--caret-left size-4', className)}
             {...props}
           />
         ),
         IconRight: ({ className, ...props }) => (
-          <Icon
-            icon="ph:caret-right"
-            className={cn('size-4', className)}
+          <svg
+            className={cn('iconify ph--caret-right size-4', className)}
             {...props}
           />
         ),

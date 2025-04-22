@@ -35,7 +35,7 @@ function HoverCardContent({
       data-slot="hover-card-content"
       align={align}
       sideOffset={sideOffset}
-      className={cn(popoverStyles.content, 'w-64 p-2 text-sm', className)}
+      className={cn(popoverStyles.content, 'w-64 p-4 text-sm', className)}
       {...props}
     />
   )

@@ -3,7 +3,6 @@ import type { UseEmblaCarouselType } from 'embla-carousel-react'
 import type { ComponentProps, KeyboardEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 
@@ -179,9 +178,8 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <Icon
-        icon="ph:arrow-left"
-        className="size-4"
+      <svg
+        className="iconify ph--arrow-left size-4"
       />
       <span className="sr-only">Previous slide</span>
     </Button>
@@ -206,9 +204,8 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <Icon
-        icon="ph:arrow-right"
-        className="size-4"
+      <svg
+        className="iconify ph--arrow-right size-4"
       />
       <span className="sr-only">Next slide</span>
     </Button>

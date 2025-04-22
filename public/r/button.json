@@ -5,7 +5,6 @@
   "title": "button",
   "description": "button component.",
   "dependencies": [
-    "@iconify/react",
     "@radix-ui/react-slot"
   ],
   "registryDependencies": [

@@ -1,7 +1,6 @@
 'use client'
 import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as ResizablePrimitive from 'react-resizable-panels'
 
 function ResizablePanelGroup({
@@ -47,9 +46,8 @@ function ResizableHandle({
     >
       {withHandle && (
         <div className="bg-border z-10 flex h-4 w-3 items-center justify-center rounded-xs border">
-          <Icon
-            icon="ph:dots-six-vertical-bold"
-            className="size-3"
+          <svg
+            className="iconify ph--dots-six-vertical-bold size-3"
           />
         </div>
       )}
