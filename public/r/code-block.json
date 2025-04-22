@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "code-block",
+  "type": "registry:component",
+  "title": "code-block",
+  "description": "code block component.",
+  "dependencies": [
+    "prism-react-renderer"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/code-block.tsx",
+      "content": "/* eslint-disable react/no-array-index-key */\nimport type { PrismTheme } from 'prism-react-renderer'\nimport type { ReactNode } from 'react'\nimport { staticStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport { Highlight } from 'prism-react-renderer'\n\ninterface CodeBlockProps {\n  children: ReactNode\n  className?: string\n  format?: boolean\n}\n\nfunction CodeBlock({ children, className }: CodeBlockProps) {\n  return (\n    <div\n      data-slot=\"code-block-root\"\n      className={cn(\n        staticStyles.base,\n        staticStyles.variant.default,\n        'p-0',\n        className,\n      )}\n    >\n      {children}\n    </div>\n  )\n}\n\ninterface CodeBlockHeaderProps {\n  children: ReactNode\n  className?: string\n}\n\nfunction CodeBlockHeader({ children, className }: CodeBlockHeaderProps) {\n  return (\n    <div\n      data-slot=\"code-block-header\"\n      className={cn(\n        staticStyles.base,\n        staticStyles.variant.default,\n        'rounded-x-none peer flex flex-row items-center justify-between rounded-b-none border-x-0 border-t-0 px-3 py-2',\n        className,\n      )}\n    >\n      {children}\n    </div>\n  )\n}\n\nconst emptyTheme = {\n  plain: {\n  },\n  styles: [],\n} as PrismTheme\n\ninterface CodeBlockContentProps {\n  children: string\n  className?: string\n  theme?: PrismTheme\n}\n\nfunction CodeBlockContent({ children, theme = emptyTheme }: CodeBlockContentProps) {\n  return (\n    <Highlight\n      code={children}\n      language=\"ts\"\n      theme={theme}\n    >\n      {({ className, style, tokens, getLineProps, getTokenProps }) => (\n        <pre\n          data-slot=\"code-block-content\"\n          style={style}\n          className={cn(\n            staticStyles.base,\n            staticStyles.variant.default,\n            'space-y-1 border-0 px-6 py-4 font-mono text-sm peer-[*]:rounded-t-none dark:bg-black/80',\n            className,\n          )}\n        >\n          {tokens.map((line, i) => (\n            <div\n              key={i}\n              {...getLineProps({\n                line,\n              })}\n            >\n              <span className=\"pr-4\">{i + 1}</span>\n              {line.map((token, key) => (\n                <span\n                  key={key}\n                  {...getTokenProps({\n                    token,\n                  })}\n                />\n              ))}\n            </div>\n          ))}\n        </pre>\n      )}\n    </Highlight>\n  )\n}\n\nexport {\n  CodeBlock,\n  CodeBlockContent,\n  CodeBlockHeader,\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}
