@@ -2,37 +2,9 @@ import type { Metadata } from 'next'
 import { Footer } from '@/components/layout/footer'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { JetBrains_Mono } from 'next/font/google'
-import localFont from 'next/font/local'
+import { mono, sans } from '@/lib/font'
 import { Header } from '../components/layout/header'
 import './globals.css'
-
-const sans = localFont({
-  src: [
-    {
-      path: '../../public/font/Nacelle-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/font/Nacelle-SemiBold.otf',
-      weight: '600',
-      style: 'medium',
-    },
-    {
-      path: '../../public/font/Nacelle-Bold.otf',
-      weight: '700',
-      style: 'bold',
-    },
-  ],
-  variable: '--font-sans',
-})
-
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  weight: ['300', '400', '500'],
-})
 
 export const metadata: Metadata = {
   title: 'mieru 🎀',
