@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Tailwind CSS
+description: Tailwind CSS styling conventions and utilities
+glob: **/*.{ts,tsx}
+---
+
+This project uses Tailwind CSS for styling with specific conventions:
+
+## Utility Patterns
+
+1. Use `cn()` utility from `lib/utils` for conditional class merging
+2. Prefer semantic class grouping (layout → spacing → colors → etc.)
+3. Use Tailwind's built-in color system with custom theme colors:
+   - `primary`: Primary brand color
+   - `muted`: Muted/secondary colors
+
+## Common Classes
+
+Frequently used class combinations:
+- Layout: `flex flex-col gap-{size}`
+- Text: `text-{size} font-bold text-primary`
+- Containers: `w-full rounded bg-muted p-{size}`
+- Lists: `flex flex-col gap-{size} list-disc pl-{size}`
+
+## Best Practices
+
+1. Use semantic class names when extending components
+2. Maintain consistent spacing scales
+3. Follow mobile-first responsive design
+4. Use Tailwind's color opacity modifiers when needed
+5. Leverage CSS variables for theme customization

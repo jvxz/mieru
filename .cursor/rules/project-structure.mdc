@@ -1,0 +1,39 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Structure
+description: Core project structure and organization guide
+glob: **/*
+---
+
+This Next.js project follows a modern app directory structure with specific conventions:
+
+## Key Directories
+
+- `src/app/`: Main application routes and page components
+  - `(index)/`: Home page and related components
+  - `docs/`: Documentation pages and related components
+    - `[[...slug]]/`: Dynamic documentation routes
+    - `@aside/`: Parallel route for documentation sidebar
+    - `@nav/`: Parallel route for documentation navigation
+
+- `src/components/`: Reusable components
+  - `layout/`: Layout-specific components
+  - `ui/`: UI components and primitives
+
+- `src/lib/`: Utility functions and shared code
+  - `css/`: CSS utilities and helpers
+  - `types/`: TypeScript type definitions
+
+- `content/`: Documentation content
+  - `docs/`: Markdown/MDX documentation files
+
+## Conventions
+
+1. All React components should be TypeScript files (.tsx)
+2. Use Next.js 13+ App Router conventions
+3. Follow parallel routes pattern for complex layouts
+4. Keep components modular and reusable
+5. Maintain clear separation between UI components and business logic
