@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles, overlayStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 
 function Dialog({ ...props }: ComponentProps<typeof DialogPrimitive.Root>) {
@@ -69,9 +68,8 @@ function DialogContent({
       >
         {children}
         <DialogPrimitive.Close className={cn(interactiveStyles.base, interactiveStyles.variant.ghost, interactiveStyles.size.icon, 'absolute top-3 right-3 inline-flex size-6 items-center justify-center opacity-70')}>
-          <Icon
-            icon="ph:x"
-            className="size-4"
+          <svg
+            className="ph--x iconify size-4"
           />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>

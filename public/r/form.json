@@ -5,7 +5,6 @@
   "title": "form",
   "description": "form component.",
   "dependencies": [
-    "@iconify/react",
     "react-hook-form",
     "@radix-ui/react-label"
   ],

@@ -5,7 +5,6 @@
   "title": "checkbox",
   "description": "checkbox component.",
   "dependencies": [
-    "@iconify/react",
     "@radix-ui/react-checkbox"
   ],
   "registryDependencies": [
@@ -14,7 +13,7 @@
   "files": [
     {
       "path": "src/components/ui/checkbox.tsx",
-      "content": "'use client'\nimport type { ComponentProps } from 'react'\nimport { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport { Icon } from '@iconify/react'\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\n\nfunction Checkbox({\n  className,\n  ...props\n}: ComponentProps<typeof CheckboxPrimitive.Root>) {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot=\"checkbox\"\n      className={cn(interactiveStyles.base, interactiveStyles.variant.default, 'active:data-[state=checked]:bg-primary/90 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary size-4 cursor-default rounded-sm transition-shadow', className)}\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot=\"checkbox-indicator\"\n        className=\"flex items-center justify-center text-current transition-none\"\n      >\n        <Icon\n          icon=\"ph:check-bold\"\n          className=\"size-3\"\n        />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nexport { Checkbox }\n",
+      "content": "'use client'\nimport type { ComponentProps } from 'react'\nimport { interactiveStyles } from '@/lib/styles'\nimport { cn } from '@/lib/utils'\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\n\nfunction Checkbox({\n  className,\n  ...props\n}: ComponentProps<typeof CheckboxPrimitive.Root>) {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot=\"checkbox\"\n      className={cn(interactiveStyles.base, interactiveStyles.variant.default, 'active:data-[state=checked]:bg-primary/90 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary size-4 cursor-default transition-shadow', className)}\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot=\"checkbox-indicator\"\n        className=\"flex items-center justify-center text-current transition-none\"\n      >\n        <svg\n          className=\"iconify ph--check size-3\"\n        />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nexport { Checkbox }\n",
       "type": "registry:component"
     }
   ]

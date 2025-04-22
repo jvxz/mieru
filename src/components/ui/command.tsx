@@ -3,7 +3,6 @@ import type { ComponentProps } from 'react'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import { Command as CommandPrimitive } from 'cmdk'
 
 function Command({
@@ -52,9 +51,8 @@ function CommandInput({
       data-slot="command-input-wrapper"
       className="flex items-center gap-2 border-b px-4"
     >
-      <Icon
-        icon="ph:magnifying-glass"
-        className="text-muted-foreground size-4 shrink-0"
+      <svg
+        className="iconify ph--magnifying-glass size-4 shrink-0 opacity-50"
       />
       <CommandPrimitive.Input
         data-slot="command-input"

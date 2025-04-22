@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles, popoverStyles, staticStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as MenubarPrimitive from '@radix-ui/react-menubar'
 
 function Menubar({
@@ -69,7 +68,7 @@ function MenubarTrigger({
       className={cn(
         interactiveStyles.base,
         interactiveStyles.variant.ghost,
-        'flex cursor-default items-center px-2 text-sm transition-all',
+        'flex h-full cursor-default items-center px-2 text-sm transition-all',
         className,
       )}
       {...props}
@@ -93,7 +92,7 @@ function MenubarContent({
         sideOffset={sideOffset}
         className={cn(
           popoverStyles.content,
-          'data-[state=open]:slide-in-from-top-2 z-50 min-w-[12rem] overflow-hidden',
+          'z-50 min-w-[12rem] overflow-hidden',
           className,
         )}
         {...props}
@@ -144,9 +143,8 @@ function MenubarCheckboxItem({
     >
       <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:check"
-            className="size-4"
+          <svg
+            className="iconify ph--check size-4"
           />
         </MenubarPrimitive.ItemIndicator>
       </span>
@@ -172,9 +170,8 @@ function MenubarRadioItem({
     >
       <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:circle"
-            className="size-2 fill-current"
+          <svg
+            className="iconify ph--circle size-2 fill-current"
           />
         </MenubarPrimitive.ItemIndicator>
       </span>
@@ -261,9 +258,8 @@ function MenubarSubTrigger({
       {...props}
     >
       {children}
-      <Icon
-        icon="ph:chevron-right"
-        className="ml-auto h-4 w-4"
+      <svg
+        className="iconify ph--caret-right ml-auto h-4 w-4"
       />
     </MenubarPrimitive.SubTrigger>
   )

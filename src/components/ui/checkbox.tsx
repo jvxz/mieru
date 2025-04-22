@@ -19,7 +19,7 @@ function Checkbox({
         className="flex items-center justify-center text-current transition-none"
       >
         <svg
-          className="iconify icon-[ph--check-bold] size-3"
+          className="iconify ph--check size-3"
         />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>

@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { popoverStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
 
 function DropdownMenu({ ...props }: ComponentProps<typeof DropdownMenuPrimitive.Root>) {
@@ -93,9 +92,8 @@ function DropdownMenuCheckboxItem({
     >
       <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <DropdownMenuPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:check"
-            className="size-4"
+          <svg
+            className="iconify ph--check size-4"
           />
         </DropdownMenuPrimitive.ItemIndicator>
       </span>
@@ -126,9 +124,8 @@ function DropdownMenuRadioItem({
     >
       <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <DropdownMenuPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:circle"
-            className="size-2 fill-current"
+          <svg
+            className="iconify ph--circle size-2 fill-current"
           />
         </DropdownMenuPrimitive.ItemIndicator>
       </span>
@@ -205,9 +202,8 @@ function DropdownMenuSubTrigger({
       {...props}
     >
       {children}
-      <Icon
-        icon="ph:chevron-right"
-        className="ml-auto size-4"
+      <svg
+        className="iconify ph--caret-right ml-auto size-4"
       />
     </DropdownMenuPrimitive.SubTrigger>
   )

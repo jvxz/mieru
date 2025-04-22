@@ -1,0 +1,54 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mieru",
+  "type": "registry:style",
+  "dependencies": [
+    "@iconify-json/ph"
+  ],
+  "devDependencies": [
+    "@iconify/tailwind4"
+  ],
+  "registryDependencies": [
+    "https://mieru.wisp.bio/r/styles-abstraction.json"
+  ],
+  "cssVars": {
+    "theme": {
+      "text-base": "1rem",
+      "--animate-accordion-down": "accordion-down 0.15s",
+      "--animate-accordion-up": "accordion-up 0.15s",
+      "--animate-caret-blink": "caret-blink 1s ease-out infinite"
+    },
+    "light": {
+      "overlay": "hsla(254, 50%, 0%, 0.65)"
+    }
+  },
+  "css": {
+    "@keyframes accordion-down": {
+      "from": {
+        "height": "0",
+        "opacity": "0"
+      },
+      "to": {
+        "height": "var(--radix-accordion-content-height)",
+        "opacity": "1"
+      }
+    },
+    "@keyframes accordion-up": {
+      "from": {
+        "height": "var(--radix-accordion-content-height)"
+      },
+      "to": {
+        "height": "0",
+        "opacity": "0"
+      }
+    },
+    "@keyframes caret-blink": {
+      "0%, 70%, 100%": {
+        "opacity": "1"
+      },
+      "20%, 50%": {
+        "opacity": "0"
+      }
+    }
+  }
+}

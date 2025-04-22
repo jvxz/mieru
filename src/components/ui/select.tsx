@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles, popoverStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as SelectPrimitive from '@radix-ui/react-select'
 
 function Select({ ...props }: ComponentProps<typeof SelectPrimitive.Root>) {
@@ -50,9 +49,8 @@ function SelectTrigger({
     >
       {children}
       <SelectPrimitive.Icon asChild>
-        <Icon
-          icon="ph:caret-down"
-          className="size-4 opacity-50"
+        <svg
+          className="iconify ph--caret-down size-4 opacity-50"
         />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
@@ -82,7 +80,7 @@ function SelectContent({
         <SelectScrollUpButton />
         <SelectPrimitive.Viewport
           className={cn('p-1', position === 'popper'
-          && 'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1')}
+            && 'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1')}
         >
           {children}
         </SelectPrimitive.Viewport>
@@ -122,9 +120,8 @@ function SelectItem({
     >
       <span className="absolute right-2 flex size-3.5 items-center justify-center">
         <SelectPrimitive.ItemIndicator>
-          <Icon
-            icon="ph:check"
-            className="text-foreground size-4"
+          <svg
+            className="iconify ph--check text-foreground size-4"
           />
         </SelectPrimitive.ItemIndicator>
       </span>
@@ -159,9 +156,8 @@ function SelectScrollUpButton({
       )}
       {...props}
     >
-      <Icon
-        icon="ph:caret-up"
-        className="size-4"
+      <svg
+        className="iconify ph--caret-up size-4"
       />
     </SelectPrimitive.ScrollUpButton>
   )
@@ -180,9 +176,8 @@ function SelectScrollDownButton({
       )}
       {...props}
     >
-      <Icon
-        icon="ph:caret-down"
-        className="size-4"
+      <svg
+        className="iconify ph--caret-down size-4"
       />
     </SelectPrimitive.ScrollDownButton>
   )

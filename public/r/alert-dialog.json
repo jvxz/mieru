@@ -5,7 +5,6 @@
   "title": "alert-dialog",
   "description": "alert dialog component.",
   "dependencies": [
-    "@iconify/react",
     "@radix-ui/react-alert-dialog"
   ],
   "registryDependencies": [

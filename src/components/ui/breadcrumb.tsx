@@ -1,6 +1,5 @@
 import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import { Slot } from '@radix-ui/react-slot'
 
 function Breadcrumb({ ...props }: ComponentProps<'nav'>) {
@@ -77,7 +76,7 @@ function BreadcrumbSeparator({
       className={cn('[&>svg]:size-3.5', className)}
       {...props}
     >
-      {children ?? <Icon icon="fluent:slash-forward-24-filled" />}
+      {children ?? <svg className="iconify ph--caret-right size-3.5" />}
     </li>
   )
 }
@@ -94,7 +93,7 @@ function BreadcrumbEllipsis({
       className={cn('flex size-9 items-center justify-center', className)}
       {...props}
     >
-      <Icon icon="ph:dots-three-vertical-bold" />
+      <svg className="iconify ph--dots-three size-3.5" />
       <span className="sr-only">More</span>
     </span>
   )

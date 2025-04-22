@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 
 function Accordion({ ...props }: ComponentProps<typeof AccordionPrimitive.Root>) {
@@ -40,9 +39,8 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <Icon
-          icon="ph:caret-down"
-          className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5"
+        <svg
+          className="iconify ph--caret-down text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5"
         />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

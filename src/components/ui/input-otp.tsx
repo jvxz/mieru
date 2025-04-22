@@ -2,7 +2,6 @@
 import type { ComponentProps } from 'react'
 import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/react'
 import { OTPInput, OTPInputContext } from 'input-otp'
 import { useContext } from 'react'
 
@@ -73,9 +72,8 @@ function InputOTPSeparator({ ...props }: ComponentProps<'div'>) {
       role="separator"
       {...props}
     >
-      <Icon
-        icon="ph:minus"
-        className="h-4 w-4"
+      <svg
+        className="iconify ph--minus h-4 w-4"
       />
     </div>
   )
