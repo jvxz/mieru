@@ -208,6 +208,21 @@
       ]
     },
     {
+      "name": "code-block",
+      "type": "registry:component",
+      "title": "code-block",
+      "description": "code block component.",
+      "dependencies": [
+        "prism-react-renderer"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/code-block.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "collapsible",
       "type": "registry:component",
       "title": "collapsible",

@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "pagination",
   "description": "pagination component.",
-  "dependencies": [
-    "@iconify/react"
-  ],
+  "dependencies": [],
   "registryDependencies": [
     "https://mieru.wisp.bio/r/styles-abstraction.json",
     "https://mieru.wisp.bio/r/button.json"
