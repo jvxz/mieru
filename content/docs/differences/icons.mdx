@@ -1,0 +1,35 @@
+---
+title: Icons
+---
+import { AllLibraries, ShadcnVsMieru } from "@/components/docs-components/differences/icons"
+
+# Icons
+
+shadcn/ui components utilize the [Lucide](https://lucide.dev/) icon library, which provides a beautiful and extensive set of icons in the form of React components. However, this icon library locks you into using their own components, which makes it difficult to swap out for another icon library.
+
+mieru components utilize the [Iconify](https://iconify.design/) library, which is an excellent solution for using icons in your codebase without vendor lock-in.
+
+<ShadcnVsMieru/>
+
+Iconify uses pure CSS to render icons, opposed to the SVG approach used by Lucide. Performance-wise, your experience will vary depending on your use case. The main benefit of Iconify is the DX that comes with swapping icon libraries.
+
+## Swapping icon libraries
+
+There are two main dependencies that are used to handle icon rendering in mieru:
+
+- [`@iconify/tailwind4`](https://iconify.design/docs/usage/css/tailwind/tailwind4/) – Tailwind CSS support for Iconify
+- [`@iconify-json/{prefix}`](https://iconify.design/docs/icons/icon-data.html) or just [`@iconify-json`](https://iconify.design/docs/icons/icon-data.html) – The icon data 
+
+### Specific libraries
+
+To find different possible icon libraries, it is recommended to visit [Icones](https://icones.js.org/), which is a convenient way to browse all of the icon libraries supported by Iconify. After finding an icon library you like, you can 
+
+### All libraries
+
+If you would prefer to be able to use all supported icon libraries, you can install the [`@iconify/react`](https://iconify.design/docs/usage/react/) package.
+
+<AllLibraries/>
+
+
+
+

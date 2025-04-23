@@ -119,34 +119,10 @@ function OverlayExamples() {
   )
 }
 
-function UnrestrictedIcons() {
-  return (
-    <div className="flex items-center gap-4 *:flex-1">
-      <CodeBlock>
-        <CodeBlockHeader>
-          shadcn/ui (Lucide)
-        </CodeBlockHeader>
-        <CodeBlockContent>
-          {'<Camera color="red" size={48} />'}
-        </CodeBlockContent>
-      </CodeBlock>
-      <CodeBlock>
-        <CodeBlockHeader>
-          mieru (Iconify)
-        </CodeBlockHeader>
-        <CodeBlockContent>
-          {'<span className="iconify icon-[lucide--camera]" />'}
-        </CodeBlockContent>
-      </CodeBlock>
-    </div>
-  )
-}
-
 export {
   InteractiveExamples,
   OverlayExamples,
   PopoverExamples,
   StaticExamples,
-  UnrestrictedIcons,
 }
 
