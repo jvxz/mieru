@@ -2,7 +2,7 @@
 title: Differences
 description: A list of differences between mieru and shadcn/ui
 ---
-import { PopoverExamples, StaticExamples, InteractiveExamples, OverlayExamples } from "@/app/docs/_components/docs-components/differences";
+import { PopoverExamples, StaticExamples, InteractiveExamples, OverlayExamples, UnrestrictedIcons } from "@/app/docs/_components/docs-components/differences";
 
 # Differences
 
@@ -47,6 +47,12 @@ Styles for any component that contains an overlay. Currently only dialogs and al
 <OverlayExamples/>
 
 ## Unrestricted icons
+
+shadcn/ui components utilize the [Lucide](https://lucide.dev/) icon library, which provides a beautiful and extensive set of icons in the form of React components. However, this icon library locks you into using their own components, which is limiting.
+
+mieru components utilize the [Iconify](https://iconify.design/) library, which is an excellent solution for using icons in your codebase without vendor lock-in.
+
+<UnrestrictedIcons/>
 
 ## Snappier animations
 

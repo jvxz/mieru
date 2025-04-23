@@ -3,6 +3,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
+import { CodeBlock, CodeBlockContent } from '@/components/ui/code-block'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
@@ -107,13 +108,25 @@ function OverlayExamples() {
             <AlertDialogAction className={
               cn(buttonVariants({
                 variant: 'destructive',
-              }),
-                'border-0'
-              )
-            }>Archive</AlertDialogAction>
+              }), 'border-0')
+            }
+            >Archive
+            </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+    </div>
+  )
+}
+
+function UnrestrictedIcons() {
+  return (
+    <div className="flex items-center gap-4 *:flex-1">
+      <CodeBlock>
+        <CodeBlockContent>
+          {'<Icon icon="ph:calendar-blank" />'}
+        </CodeBlockContent>
+      </CodeBlock>
     </div>
   )
 }
@@ -123,5 +136,6 @@ export {
   OverlayExamples,
   PopoverExamples,
   StaticExamples,
+  UnrestrictedIcons,
 }
 
