@@ -3,7 +3,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
-import { CodeBlock, CodeBlockContent } from '@/components/ui/code-block'
+import { CodeBlock, CodeBlockContent, CodeBlockHeader } from '@/components/ui/code-block'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
@@ -123,8 +123,19 @@ function UnrestrictedIcons() {
   return (
     <div className="flex items-center gap-4 *:flex-1">
       <CodeBlock>
+        <CodeBlockHeader>
+          shadcn/ui (Lucide)
+        </CodeBlockHeader>
         <CodeBlockContent>
-          {'<Icon icon="ph:calendar-blank" />'}
+          {'<Camera color="red" size={48} />'}
+        </CodeBlockContent>
+      </CodeBlock>
+      <CodeBlock>
+        <CodeBlockHeader>
+          mieru (Iconify)
+        </CodeBlockHeader>
+        <CodeBlockContent>
+          {'<span className="iconify icon-[lucide--camera]" />'}
         </CodeBlockContent>
       </CodeBlock>
     </div>
