@@ -48,19 +48,131 @@ function CodeBlockHeader({ children, className }: CodeBlockHeaderProps) {
   )
 }
 
-const emptyTheme = {
+const defaultTheme = {
   plain: {
+    color: 'var(--card-foreground)',
   },
-  styles: [],
+  styles: [
+    {
+      types: ['comment', 'prolog', 'doctype', 'cdata'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['punctuation'],
+      style: {
+        color: 'var(--foreground)',
+      },
+    },
+    {
+      types: ['namespace'],
+      style: {
+        opacity: 0.7,
+      },
+    },
+    {
+      types: ['property', 'keyword', 'tag'],
+      style: {
+        color: 'var(--primary)',
+      },
+    },
+    {
+      types: ['class-name', 'maybe-class-name'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['boolean', 'constant'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['symbol', 'deleted'],
+      style: {
+        color: 'var(--destructive)',
+      },
+    },
+    {
+      types: ['number'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['selector', 'attr-name', 'string', 'char', 'builtin', 'inserted'],
+      style: {
+        color: 'var(--primary)',
+      },
+    },
+    {
+      types: ['variable'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['operator'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['entity'],
+      style: {
+        color: 'var(--muted-foreground)',
+        cursor: 'help',
+      },
+    },
+    {
+      types: ['url'],
+      style: {
+        color: 'var(--primary)',
+      },
+    },
+    {
+      types: ['function'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['regex'],
+      style: {
+        color: 'var(--muted-foreground)',
+      },
+    },
+    {
+      types: ['important'],
+      style: {
+        color: 'var(--destructive)',
+        fontWeight: 'bold',
+      },
+    },
+    {
+      types: ['bold'],
+      style: {
+        fontWeight: 'bold',
+      },
+    },
+    {
+      types: ['italic'],
+      style: {
+        fontStyle: 'italic',
+      },
+    },
+  ],
 } as PrismTheme
 
 interface CodeBlockContentProps {
   children: string
-  className?: string
   theme?: PrismTheme
+  lineNumbers?: boolean
 }
 
-function CodeBlockContent({ children, theme = emptyTheme }: CodeBlockContentProps) {
+function CodeBlockContent({ children, theme = defaultTheme, lineNumbers = false }: CodeBlockContentProps) {
   return (
     <Highlight
       code={children}
@@ -74,7 +186,7 @@ function CodeBlockContent({ children, theme = emptyTheme }: CodeBlockContentProp
           className={cn(
             staticStyles.base,
             staticStyles.variant.default,
-            'space-y-1 border-0 px-6 py-4 font-mono text-sm peer-[*]:rounded-t-none dark:bg-black/80',
+            'space-y-1 border-0 p-6 font-mono text-sm peer-[*]:rounded-t-none dark:bg-black/80',
             className,
           )}
         >
@@ -85,7 +197,7 @@ function CodeBlockContent({ children, theme = emptyTheme }: CodeBlockContentProp
                 line,
               })}
             >
-              <span className="pr-4">{i + 1}</span>
+              {lineNumbers && <span className="pr-4 opacity-50">{i + 1}</span>}
               {line.map((token, key) => (
                 <span
                   key={key}
