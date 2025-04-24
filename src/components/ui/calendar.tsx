@@ -1,4 +1,5 @@
-/* eslint-disable react/no-nested-components */
+/* eslint-disable react/no-nested-component-definitions */
+/*  */
 'use client'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'

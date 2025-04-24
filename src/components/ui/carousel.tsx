@@ -4,7 +4,7 @@ import type { ComponentProps, KeyboardEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import useEmblaCarousel from 'embla-carousel-react'
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, use, useCallback, useEffect, useMemo, useState } from 'react'
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -30,7 +30,7 @@ type CarouselContextProps = {
 const CarouselContext = createContext<CarouselContextProps | null>(null)
 
 function useCarousel() {
-  const context = useContext(CarouselContext)
+  const context = use(CarouselContext)
 
   if (!context) {
     throw new Error('useCarousel must be used within a <Carousel />')

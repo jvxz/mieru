@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 import { Highlight } from 'prism-react-renderer'
 import { useCallback, useState } from 'react'
 import { Button } from './button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './dropdown-menu'
 
 interface CodeBlockProps {
   children: ReactNode

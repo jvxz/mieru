@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { interactiveStyles } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { OTPInput, OTPInputContext } from 'input-otp'
-import { useContext } from 'react'
+import { use } from 'react'
 
 function InputOTP({
   className,
@@ -39,7 +39,7 @@ function InputOTPSlot({
 }: ComponentProps<'div'> & {
   index: number
 }) {
-  const inputOTPContext = useContext(OTPInputContext)
+  const inputOTPContext = use(OTPInputContext)
   const { char, hasFakeCaret, isActive } = inputOTPContext?.slots[index] ?? {
   }
 

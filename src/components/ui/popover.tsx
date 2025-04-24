@@ -36,7 +36,7 @@ function PopoverContent({
         sideOffset={sideOffset}
         className={cn(
           popoverStyles.content,
-          'text-sm p-4',
+          'p-4 text-sm',
           className,
         )}
         {...props}

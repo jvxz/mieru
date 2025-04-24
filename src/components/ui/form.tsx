@@ -5,7 +5,7 @@ import type { ControllerProps, FieldPath, FieldValues } from 'react-hook-form'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
-import { createContext, useContext, useId, useMemo } from 'react'
+import { createContext, use, useId, useMemo } from 'react'
 import { Controller, FormProvider, useFormContext, useFormState } from 'react-hook-form'
 
 const Form = FormProvider
@@ -42,8 +42,8 @@ function FormField<
 }
 
 function useFormField() {
-  const fieldContext = useContext(FormFieldContext)
-  const itemContext = useContext(FormItemContext)
+  const fieldContext = use(FormFieldContext)
+  const itemContext = use(FormItemContext)
   const { getFieldState } = useFormContext()
   const formState = useFormState({
     name: fieldContext.name,

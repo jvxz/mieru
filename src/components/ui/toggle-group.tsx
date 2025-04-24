@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react'
 import { toggleVariants } from '@/components/ui/toggle'
 import { cn } from '@/lib/utils'
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group'
-import { createContext, useContext, useMemo } from 'react'
+import { createContext, use, useMemo } from 'react'
 
 const ToggleGroupContext = createContext<
   VariantProps<typeof toggleVariants>
@@ -52,7 +52,7 @@ function ToggleGroupItem({
   ...props
 }: ComponentProps<typeof ToggleGroupPrimitive.Item> &
   VariantProps<typeof toggleVariants>) {
-  const context = useContext(ToggleGroupContext)
+  const context = use(ToggleGroupContext)
 
   return (
     <ToggleGroupPrimitive.Item

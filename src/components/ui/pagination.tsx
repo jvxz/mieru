@@ -40,7 +40,7 @@ function PaginationItem({ ...props }: ComponentProps<'li'>) {
 type PaginationLinkProps = {
   isActive?: boolean
 } & Pick<ComponentProps<typeof Button>, 'size'> &
-  ComponentProps<'a'>
+ComponentProps<'a'>
 
 function PaginationLink({
   className,
