@@ -1,5 +1,7 @@
-import { CodeBlock, CodeBlockContent, CodeBlockHeader } from '@/components/ui/code-block'
+'use client'
+import { CodeBlock, CodeBlockContent, CodeBlockHeader, CodeBlockMenu, CodeBlockMenuContent, CodeBlockMenuItem, CodeBlockMenuTrigger } from '@/components/ui/code-block'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useState } from 'react'
 
 function ShadcnVsMieru() {
   return (
@@ -25,36 +27,33 @@ function ShadcnVsMieru() {
 }
 
 function AllLibraries() {
+  const [pm, setPm] = useState<'npm' | 'pnpm' | 'yarn' | 'bun'>('bun')
+
   return (
-    <Tabs
-      defaultValue="npm"
-      className="w-[400px]"
-    >
-      <TabsList>
-        <TabsTrigger value="npm">npm</TabsTrigger>
-        <TabsTrigger value="bun">bun</TabsTrigger>
-      </TabsList>
-      <TabsContent value="npm">
-        <CodeBlock>
-          <CodeBlockHeader>
-            npm
-          </CodeBlockHeader>
-          <CodeBlockContent>
-            npm install @iconify/react
-          </CodeBlockContent>
-        </CodeBlock>
-      </TabsContent>
-      <TabsContent value="bun">
-        <CodeBlock>
-          <CodeBlockHeader>
-            bun
-          </CodeBlockHeader>
-          <CodeBlockContent>
-            bun install @iconify/react
-          </CodeBlockContent>
-        </CodeBlock>
-      </TabsContent>
-    </Tabs>
+    <CodeBlock>
+      <CodeBlockHeader>
+        <CodeBlockMenu>
+          <CodeBlockMenuTrigger>
+            {pm}
+          </CodeBlockMenuTrigger>
+          <CodeBlockMenuContent>
+            <CodeBlockMenuItem onClick={() => setPm('npm')}>npm</CodeBlockMenuItem>
+            <CodeBlockMenuItem onClick={() => setPm('pnpm')}>pnpm</CodeBlockMenuItem>
+            <CodeBlockMenuItem onClick={() => setPm('yarn')}>yarn</CodeBlockMenuItem>
+            <CodeBlockMenuItem onClick={() => setPm('bun')}>bun</CodeBlockMenuItem>
+          </CodeBlockMenuContent>
+        </CodeBlockMenu>
+      </CodeBlockHeader>
+      <CodeBlockContent>
+        {pm === 'npm'
+          ? 'npm i @iconify/react'
+          : pm === 'pnpm'
+            ? 'pnpm i @iconify/react'
+            : pm === 'yarn'
+              ? 'yarn add @iconify/react'
+              : 'bun add @iconify/react'}
+      </CodeBlockContent>
+    </CodeBlock>
   )
 }
 
