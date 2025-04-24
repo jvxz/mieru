@@ -1,0 +1,57 @@
+---
+title: Differences
+description: A list of differences between mieru and shadcn/ui
+---
+import { PopoverExamples, StaticExamples, InteractiveExamples, OverlayExamples, UnrestrictedIcons } from "@/components/docs-components/differences";
+
+# Differences
+
+mieru comes with a slew of features and changes from shadcn/ui. 
+
+## Design
+
+The most distinguishable feature of mieru is its unique design. The design of mieru's components experiences a complete departure from shadcn/ui's design, focusing on a more playful and feedback-driven approach.
+
+## Source of truth
+
+One of the most notable benefits of shadcn/ui is ease of use for styling its components. All components are able to be fully customized using Tailwind CSS. However, one drawback of this is that it can be a chore to edit the overall design system. You would need to edit each component's styles and keep track of which components use which styles.
+
+mieru components reference a single `styles.ts` file, which contains the fundamental styles for different component categories. This allows for a single source of truth for the design system, making it trivial to maintain and update.
+
+The majority of mieru components can be classified as either "static" or "interactive". Two other, more specific categories include "popover" and "overlay".
+
+{/* - **Static**: Elements whose style do not change when interacting with them. Examples being cards, alerts, and badges */}
+
+### Static
+
+Components whose style do not change when interacting with them. Examples being cards, alerts, and badges
+
+<StaticExamples/>
+
+### Interactive
+
+Components whose style change when interacting with them. Examples being buttons, checkboxes, and switches
+
+<InteractiveExamples/>
+
+### Popover
+
+Styles for any component that contains a popover (or similar). Examples being dropdowns, hover cards, and navigation menus.
+
+<PopoverExamples/>
+
+### Overlay
+
+Styles for any component that contains an overlay. Currently only dialogs and alert dialogs.
+
+<OverlayExamples/>
+
+
+
+## Snappier animations
+
+### Duration
+
+### Outro animations
+
+## Components

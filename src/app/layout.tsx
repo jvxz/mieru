@@ -1,14 +1,10 @@
 import type { Metadata } from 'next'
+import { Footer } from '@/components/layout/footer'
 import { Providers } from '@/components/providers'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { mono, sans } from '@/lib/font'
+import { Header } from '../components/layout/header'
 import './globals.css'
-
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ['latin'],
-  variable: '--font-ibm-plex-sans',
-  weight: ['400', '500', '600', '700'],
-})
 
 export const metadata: Metadata = {
   title: 'mieru 🎀',
@@ -19,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={ibmPlexSans.variable}
+      className={`${sans.variable} scrollbar-track-background scrollbar-thumb-muted scrollbar-thin antialiased ${mono.variable}`}
     >
       {process.env.NODE_ENV === 'development' && (
         <head>
@@ -29,15 +25,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </head>
       )}
-      <body className="font-ibm-plex-sans">
+      <body className="flex flex-col transition-colors">
+        {/* <body className="font-ibm-plex-sans container !mx-auto flex w-full flex-col pl-[calc(100vw_-_100%)] transition-colors"> */}
         <Providers>
           {process.env.NODE_ENV === 'development' && (
             <ThemeToggle
               className="absolute top-4 left-4"
             />
           )}
-          {children}
-          {/* <div className="grid h-screen place-items-center">soon</div> */}
+          <div className="relative container mx-auto flex min-h-svh flex-col">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

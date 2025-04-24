@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# MDX Components
+description: MDX component styling and usage guidelines
+glob: **/*.mdx
+---
+
+The project uses custom MDX components for documentation with specific styling conventions:
+
+## Component Styling
+
+1. All components extend `fumadocs-ui/mdx` default components
+2. Components use Tailwind CSS for styling
+3. Common styling patterns:
+   - Article wrapper: Full width flex column with gap-6
+   - Code blocks: Muted background, rounded corners, monospace font
+   - Headings: Bold with specific size hierarchy
+   - Lists: Disc style with padding and gap
+   - Links: Primary color, bold, underlined
+
+## Component Reference
+
+Key components and their styling:
+- `wrapper`: Article container with flex column layout
+- `code`: Inline code with muted background
+- `h1`: Large headings (2xl) with bottom border
+- `h2`: Medium headings (lg) with bottom border
+- `h3`: Small headings (md) with bold weight
+- `ul`: Disc-style lists with padding
+- `a`: Primary-colored underlined links
+
+Reference [mdx-components.tsx](mdc:src/mdx-components.tsx) for implementation details.

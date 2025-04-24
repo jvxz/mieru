@@ -1,0 +1,9 @@
+{
+  "type": "folder",
+  "title": "Documentation",
+  "pages": [
+    "overview",
+    "differences",
+    "components"
+  ]
+}
